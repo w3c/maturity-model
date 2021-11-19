@@ -1,5 +1,4 @@
 
-# Specification 'wcag-maturity-model'
+# Specification 'Web Content Accessibility Guidelines-Maturity-Model'
 
-This is the repository for wcag-maturity-model. You're welcome to contribute! Let's make the Web rock our socks
-off!
+This is the repository for a proposed WCAG Maturity Model that is intended to drive Web Content Accessibility Guidelines compliance and continuous improvement. Please review and provide feedback.
