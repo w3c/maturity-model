@@ -1,2 +1,2 @@
 
-After migrate this document, the link of this document at: https://w3c.github.io/maturity-model/
+After migrating this document to APA, the link of this document updated at: https://w3c.github.io/maturity-model/
