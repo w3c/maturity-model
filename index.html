@@ -1,0 +1,1337 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta name="generator" content="ReSpec 32.1.4">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+.issue-label{text-transform:initial}
+.warning>p:first-child{margin-top:0}
+.warning{padding:.5em;border-left-width:.5em;border-left-style:solid}
+span.warning{padding:.1em .5em .15em}
+.issue.closed span.issue-number{text-decoration:line-through}
+.warning{border-color:#f11;border-width:.2em;border-style:solid;background:#fbe9e9}
+.warning-title:before{content:"⚠";font-size:1.3em;float:left;padding-right:.3em;margin-top:-.3em}
+li.task-list-item{list-style:none}
+input.task-list-item-checkbox{margin:0 .35em .25em -1.6em;vertical-align:middle}
+.issue a.respec-gh-label{padding:5px;margin:0 2px 0 2px;font-size:10px;text-transform:none;text-decoration:none;font-weight:700;border-radius:4px;position:relative;bottom:2px;border:none;display:inline-block}
+</style>
+<style>
+dfn{cursor:pointer}
+.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font:small Helvetica Neue,sans-serif,Droid Sans Fallback;background:#fff;color:#000;box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);border-radius:2px}
+.dfn-panel:not(.docked)>.caret{position:absolute;top:-9px}
+.dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;top:0}
+.dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1}
+.dfn-panel *{margin:0}
+.dfn-panel b{display:block;color:#000;margin-top:.25em}
+.dfn-panel ul a[href]{color:#333}
+.dfn-panel>div{display:flex}
+.dfn-panel a.self-link{font-weight:700;margin-right:auto}
+.dfn-panel .marker{padding:.1em;margin-left:.5em;border-radius:.2em;text-align:center;white-space:nowrap;font-size:90%;color:#040b1c}
+.dfn-panel .marker.dfn-exported{background:#d1edfd;box-shadow:0 0 0 .125em #1ca5f940}
+.dfn-panel .marker.idl-block{background:#8ccbf2;box-shadow:0 0 0 .125em #0670b161}
+.dfn-panel a:not(:hover){text-decoration:none!important;border-bottom:none!important}
+.dfn-panel a[href]:hover{border-bottom-width:1px}
+.dfn-panel ul{padding:0}
+.dfn-panel li{margin-left:1em}
+.dfn-panel.docked{position:fixed;left:.5em;top:unset;bottom:2em;margin:0 auto;max-width:calc(100vw - .75em * 2 - .5em - .2em * 2);max-height:30vh;overflow:auto}
+</style>
+<style>
+
+  table,
+  th,
+  td {
+    padding: 10px;
+    border: 1px solid black;
+    border-collapse: collapse;
+  
+  }
+
+</style>
+
+  
+    
+    
+<title>W3C Accessibility Maturity Model</title>
+    
+<style id="respec-mainstyle">
+@keyframes pop{
+0%{transform:scale(1,1)}
+25%{transform:scale(1.25,1.25);opacity:.75}
+100%{transform:scale(1,1)}
+}
+:is(h1,h2,h3,h4,h5,h6,a) abbr{border:none}
+dfn{font-weight:700}
+a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
+a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
+a.bibref{text-decoration:none}
+.respec-offending-element:target{animation:pop .25s ease-in-out 0s 1}
+.respec-offending-element,a[href].respec-offending-element{text-decoration:red wavy underline}
+@supports not (text-decoration:red wavy underline){
+.respec-offending-element:not(pre){display:inline-block}
+.respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}
+}
+#references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}
+cite .bibref{font-style:normal}
+code{color:#c63501}
+th code{color:inherit}
+a[href].orcid{padding-left:4px;padding-right:4px}
+a[href].orcid>svg{margin-bottom:-2px}
+.toc a,.tof a{text-decoration:none}
+a .figno,a .secno{color:#000}
+ol.tof,ul.tof{list-style:none outside none}
+.caption{margin-top:.5em;font-style:italic}
+table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}
+.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}
+.simple th a{color:#fff;padding:3px 5px;text-align:left}
+.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}
+.simple td{padding:3px 10px;border-top:1px solid #ddd}
+.simple tr:nth-child(even){background:#f0f6ff}
+.section dd>p:first-child{margin-top:0}
+.section dd>p:last-child{margin-bottom:0}
+.section dd{margin-bottom:1em}
+.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}
+#issue-summary>ul{column-count:2}
+#issue-summary li{list-style:none;display:inline-block}
+details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}
+details.respec-tests-details>*{padding-right:2em}
+details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}
+details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padding-left:1em;margin-bottom:1em;line-height:2em}
+details.respec-tests-details>ul{width:100%;margin-top:-.3em}
+details.respec-tests-details>li{padding-left:1em}
+.self-link:hover{opacity:1;text-decoration:none;background-color:transparent}
+aside.example .marker>a.self-link{color:inherit}
+.header-wrapper{display:flex;align-items:baseline}
+:is(h2,h3,h4,h5,h6):not(#toc>h2,#abstract>h2,#sotd>h2,.head>h2){position:relative;left:-.5em}
+:is(h2,h3,h4,h5,h6):not(#toch2)+a.self-link{color:inherit;order:-1;position:relative;left:-1.1em;font-size:1rem;opacity:.5}
+:is(h2,h3,h4,h5,h6)+a.self-link::before{content:"§";text-decoration:none;color:var(--heading-text)}
+:is(h2,h3)+a.self-link{top:-.2em}
+:is(h4,h5,h6)+a.self-link::before{color:#000}
+@media (max-width:767px){
+dd{margin-left:0}
+}
+@media print{
+.removeOnSave{display:none}
+}
+</style>
+    
+  
+<meta name="description" content="W3C Accessibility Maturity Model guides a public or private organization to design, implement and evaluate their processes to produce digital products that are accessible to people with disabilities.  It is designed to work for many different size organizations from small to large corporations or government agencies.">
+<style>
+var{position:relative;cursor:pointer}
+var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}
+var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#000}
+var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#000;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}
+var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
+</style>
+<script id="initialUserConfig" type="application/json">{
+  "specStatus": "ED",
+  "shortName": "maturity-model",
+  "group": "apa",
+  "github": "w3c/maturity-model",
+  "editors": [
+    {
+      "name": "Sheri Byrne-Haber",
+      "company": "VMWare",
+      "companyURL": "https://www.vmware.com/"
+    },
+    {
+      "name": "David Fazio",
+      "company": "Helix Opportunity",
+      "companyURL": "https://helixopp.com/"
+    },
+    {
+      "name": "Janina Sajka",
+      "company": "Invited Expert"
+    },
+    {
+      "name": "Ruoxi Ran",
+      "company": "W3C",
+      "companyURL": "https://w3c.org/"
+    }
+  ],
+  "publishISODate": "2022-04-25T00:00:00.000Z",
+  "generatedSubtitle": "W3C Editor's Draft 25 April 2022"
+}</script>
+<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED"></head>
+  <body class="h-entry informative"><div class="head">
+    <p class="logos"><a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
+  </a></p>
+    <h1 id="title" class="title">W3C Accessibility Maturity Model</h1> 
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2022-04-25">25 April 2022</time></p>
+    <details open="">
+      <summary>More details about this document</summary>
+      <dl>
+        <dt>This version:</dt><dd>
+                <a class="u-url" href="https://w3c.github.io/maturity-model/">https://w3c.github.io/maturity-model/</a>
+              </dd>
+        <dt>Latest published version:</dt><dd>
+                <a href="https://www.w3.org/TR/maturity-model/">https://www.w3.org/TR/maturity-model/</a>
+              </dd>
+        <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/maturity-model/">https://w3c.github.io/maturity-model/</a></dd>
+        <dt>History:</dt><dd>
+                    <a href="https://github.com/w3c/maturity-model/commits/">Commit history</a>
+                  </dd>
+        
+        
+        
+        
+        
+        <dt>Editors:</dt><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Sheri Byrne-Haber</span> (<a class="p-org org h-org" href="https://www.vmware.com/">VMWare</a>)
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">David Fazio</span> (<a class="p-org org h-org" href="https://helixopp.com/">Helix Opportunity</a>)
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Janina Sajka</span> (<span class="p-org org h-org">Invited Expert</span>)
+  </dd><dd class="editor p-author h-card vcard">
+    <span class="p-name fn">Ruoxi Ran</span> (<a class="p-org org h-org" href="https://w3c.org/">W3C</a>)
+  </dd>
+        
+        
+        <dt>Feedback:</dt><dd>
+        <a href="https://github.com/w3c/maturity-model/">GitHub w3c/maturity-model</a>
+        (<a href="https://github.com/w3c/maturity-model/pulls/">pull requests</a>,
+        <a href="https://github.com/w3c/maturity-model/issues/new/choose">new issue</a>,
+        <a href="https://github.com/w3c/maturity-model/issues/">open issues</a>)
+      </dd>
+        
+        
+      </dl>
+    </details>
+    
+    
+    <p class="copyright">
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
+    ©
+    2022
+    
+    <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
+    <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
+    <a href="https://ev.buaa.edu.cn/">Beihang</a>). W3C
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and
+    <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document" title="W3C Software and Document Notice and License">permissive document license</a> rules apply.
+  </p>
+    <hr title="Separator for header">
+  </div>
+    <section id="abstract" class="introductory"><h2>Abstract</h2>
+      <p><abbr title="World Wide Web Consortium">W3C</abbr> Accessibility Maturity Model guides a public or private organization to design, implement and evaluate their processes to produce digital products that are accessible to people with disabilities.  It is designed to work for many different size organizations from small to large corporations or government agencies. </p>
+      <p></p>
+    </section>
+    <section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this
+      document at the time of its publication. A list of current <abbr title="World Wide Web Consortium">W3C</abbr>
+      publications and the latest revision of this technical report can be found
+      in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at
+      https://www.w3.org/TR/.</em></p>
+    <p>
+    This document was published by the <a href="https://www.w3.org/groups/wg/apa">Accessible Platform Architectures Working Group</a> as
+    an Editor's Draft. 
+  </p><p>Publication as an Editor's Draft does not
+  imply endorsement by <abbr title="World Wide Web Consortium">W3C</abbr> and its Members. </p><p>
+    This is a draft document and may be updated, replaced or obsoleted by other
+    documents at any time. It is inappropriate to cite this document as other
+    than work in progress.
+    
+  </p><p>
+    
+        This document was produced by a group
+        operating under the
+        <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent
+          Policy</a>.
+      
+    
+                <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
+                <a rel="disclosure" href="https://www.w3.org/groups/wg/apa/ipr">public list of any patent disclosures</a>
+          made in connection with the deliverables of
+          the group; that page also includes
+          instructions for disclosing a patent. An individual who has actual
+          knowledge of a patent which the individual believes contains
+          <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
+          must disclose the information in accordance with
+          <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+        
+  </p><p>
+                  This document is governed by the
+                  <a id="w3c_process_revision" href="https://www.w3.org/2021/Process-20211102/">2 November 2021 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#about-w3c-accessibility-maturity-model"><bdi class="secno">1.1 </bdi>About <abbr title="World Wide Web Consortium">W3C</abbr> Accessibility Maturity Model</a></li><li class="tocline"><a class="tocxref" href="#WCAG-maturity-model-audience"><bdi class="secno">1.2 </bdi><abbr title="World Wide Web Consortium">W3C</abbr> Accessibility Maturity Model Audience</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#scope"><bdi class="secno">1.2.1 </bdi>Scope</a></li></ol></li><li class="tocline"><a class="tocxref" href="#existing-research"><bdi class="secno">1.3 </bdi>Existing Research</a></li><li class="tocline"><a class="tocxref" href="#open-questions"><bdi class="secno">1.4 </bdi>Open Questions</a></li></ol></li><li class="tocline"><a class="tocxref" href="#maturity-model-dimensions"><bdi class="secno">2. </bdi>Maturity Model "Dimensions"</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#dimensional-maturity-stages"><bdi class="secno">2.1 </bdi>Dimensional Maturity Stages</a></li><li class="tocline"><a class="tocxref" href="#dimensions-structure"><bdi class="secno">2.2 </bdi>Dimensions structure</a></li><li class="tocline"><a class="tocxref" href="#Outcomes"><bdi class="secno">2.3 </bdi>Outcomes</a></li><li class="tocline"><a class="tocxref" href="#proof-points"><bdi class="secno">2.4 </bdi>Proof Points</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#description"><bdi class="secno">2.4.1 </bdi>Description</a></li><li class="tocline"><a class="tocxref" href="#proof-point-examples"><bdi class="secno">2.4.2 </bdi>Proof Point Examples</a></li><li class="tocline"><a class="tocxref" href="#maturity-stages"><bdi class="secno">2.4.3 </bdi>Maturity Stages</a></li></ol></li><li class="tocline"><a class="tocxref" href="#maturity-model-assessment-template"><bdi class="secno">2.5 </bdi>Maturity Model Assessment Template</a></li></ol></li><li class="tocline"><a class="tocxref" href="#the-dimensions"><bdi class="secno">3. </bdi>The Dimensions</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#Communications"><bdi class="secno">3.1 </bdi>Communications</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#communications-proof-points"><bdi class="secno">3.1.1 </bdi>Proof Points</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#direct-communications"><bdi class="secno">3.1.1.1 </bdi>Direct communications</a></li><li class="tocline"><a class="tocxref" href="#preconditions-for-accessible-communication"><bdi class="secno">3.1.1.2 </bdi>Preconditions for accessible communication</a></li></ol></li><li class="tocline"><a class="tocxref" href="#communications-ratings-for-evaluation"><bdi class="secno">3.1.2 </bdi>Ratings for Evaluation</a></li></ol></li><li class="tocline"><a class="tocxref" href="#knowledge-and-skills"><bdi class="secno">3.2 </bdi>Knowledge and Skills</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#knowledge-and-skills-proof-points"><bdi class="secno">3.2.1 </bdi>Proof Points</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#hires-external-knowledge-and-skills"><bdi class="secno">3.2.1.1 </bdi>Hires External Knowledge and Skills</a></li><li class="tocline"><a class="tocxref" href="#offers-documentation-and-resources"><bdi class="secno">3.2.1.2 </bdi>Offers Documentation and Resources</a></li><li class="tocline"><a class="tocxref" href="#offers-training"><bdi class="secno">3.2.1.3 </bdi>"Offers Training"</a></li><li class="tocline"><a class="tocxref" href="#conveys-insights-of-knowledge-and-skills"><bdi class="secno">3.2.1.4 </bdi>Conveys Insights of Knowledge and Skills</a></li></ol></li><li class="tocline"><a class="tocxref" href="#knowledge-ratings-for-evaluation"><bdi class="secno">3.2.2 </bdi>Ratings for Evaluation</a></li></ol></li><li class="tocline"><a class="tocxref" href="#support"><bdi class="secno">3.3 </bdi>Support</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#support-proof-points"><bdi class="secno">3.3.1 </bdi>Proof Points</a></li><li class="tocline"><a class="tocxref" href="#maturity-stages-0"><bdi class="secno">3.3.2 </bdi>Maturity Stages</a></li></ol></li><li class="tocline"><a class="tocxref" href="#ict-development-lifecycle"><bdi class="secno">3.4 </bdi>ICT Development Lifecycle</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#development-lifecycle-proof-points"><bdi class="secno">3.4.1 </bdi>Proof Points</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#design"><bdi class="secno">3.4.1.1 </bdi>Design</a></li><li class="tocline"><a class="tocxref" href="#development"><bdi class="secno">3.4.1.2 </bdi>Development</a></li><li class="tocline"><a class="tocxref" href="#user-experience"><bdi class="secno">3.4.1.3 </bdi>User Experience</a></li><li class="tocline"><a class="tocxref" href="#quality-review-release"><bdi class="secno">3.4.1.4 </bdi>Quality Review / Release</a></li></ol></li><li class="tocline"><a class="tocxref" href="#development-lifecycle-ratings-for-evaluation"><bdi class="secno">3.4.2 </bdi>Ratings for evaluation</a></li></ol></li><li class="tocline"><a class="tocxref" href="#personnel"><bdi class="secno">3.5 </bdi>Personnel</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#personnel-proof-points"><bdi class="secno">3.5.1 </bdi>Proof Points</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#targeted-recruiting"><bdi class="secno">3.5.1.1 </bdi>Targeted Recruiting</a></li><li class="tocline"><a class="tocxref" href="#accessible-job-application-platform"><bdi class="secno">3.5.1.2 </bdi>Accessible Job Application Platform</a></li><li class="tocline"><a class="tocxref" href="#strategic-engagement"><bdi class="secno">3.5.1.3 </bdi>Strategic Engagement</a></li></ol></li><li class="tocline"><a class="tocxref" href="#personnel-ratings-for-evaluation"><bdi class="secno">3.5.2 </bdi>Ratings for Evaluation</a></li></ol></li><li class="tocline"><a class="tocxref" href="#procurement"><bdi class="secno">3.6 </bdi>Procurement</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#procurement-proof-points"><bdi class="secno">3.6.1 </bdi>Proof Points</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#policy-documentation"><bdi class="secno">3.6.1.1 </bdi>Policy Documentation</a></li><li class="tocline"><a class="tocxref" href="#consistent-contract-language"><bdi class="secno">3.6.1.2 </bdi>Consistent Use of Standardized Solicitation and Contract Language</a></li><li class="tocline"><a class="tocxref" href="#consistent-evaluation"><bdi class="secno">3.6.1.3 </bdi>Consistent Evaluation Process and Methods</a></li><li class="tocline"><a class="tocxref" href="#burden-of-proof-requirements"><bdi class="secno">3.6.1.4 </bdi>“Burden of proof“ accessibility Contract language requirements</a></li><li class="tocline"><a class="tocxref" href="#procurement-program-management"><bdi class="secno">3.6.1.5 </bdi>Accessibility in Procurement Program Management</a></li></ol></li><li class="tocline"><a class="tocxref" href="#procurement-ratings-for-evaluation"><bdi class="secno">3.6.2 </bdi>Ratings for Evaluation</a></li></ol></li><li class="tocline"><a class="tocxref" href="#culture"><bdi class="secno">3.7 </bdi>Culture</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#culture-proof-points"><bdi class="secno">3.7.1 </bdi>Proof Points</a></li><li class="tocline"><a class="tocxref" href="#culture-ratings-for-evaluation"><bdi class="secno">3.7.2 </bdi>Ratings for Evaluation</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#Acknowledgements"><bdi class="secno">4. </bdi>Acknowledgements</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#key-contributors-section-editors-and-participants-active-in-the-maturity-model-subgroup-at-the-time-of-publication"><bdi class="secno">4.1 </bdi>Key contributors, section editors and participants active in the Maturity Model Subgroup at the time of publication</a></li></ol></li></ol></nav>
+
+    <section id="introduction"><div class="header-wrapper"><h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction</h2><a class="self-link" href="#introduction" aria-label="Permalink for Section 1."></a></div>
+      
+      <p>
+        See <a href="https://github.com/w3c/respec/wiki/User's-Guide">ReSpec's user guide</a>
+        for how toget started!
+      </p>
+      <section id="about-w3c-accessibility-maturity-model"><div class="header-wrapper"><h3 id="x1-1-about-w3c-accessibility-maturity-model"><bdi class="secno">1.1 </bdi>About <abbr title="World Wide Web Consortium">W3C</abbr> Accessibility Maturity Model</h3><a class="self-link" href="#about-w3c-accessibility-maturity-model" aria-label="Permalink for Section 1.1"></a></div>
+        
+        <p>ICT Accessibility within organizations of any size can be complex with multiple dimensions.  Although some organizations have individuals or departments to support accessibility, many organizations lack understanding or fail to recognize the importance of ICT accessibility as a requirement, and therefore don’t realize they need accessibility governance systems. This can result in limits to the ability to produce accessible products and associated services such as training and documentation which are essential for inclusive digital environments. The solution to this challenge is to encourage organizations to establish and implement accessibility governance systems within their organizations. These systems must integrate ICT accessibility criteria into policies, key business processes, organizational culture, and management structures in a consistent, repeatable, and measurable fashion. Only then can organizations address the complexities related to enabling ICT accessibility.</p>
+        <p>This proposed <abbr title="World Wide Web Consortium">W3C</abbr> Accessibility Maturity Model describes an overall framework for establishing a robust ICT accessibility program and identifying areas for improvement. ​A Maturity Model is:</p>
+        <p>A tool;</p>
+        <ol>
+          <li>That helps people assess the current effectiveness of a person, group, or an organization;</li>
+          <li>And supports figuring out what capabilities they have and need to acquire next;</li>
+          <li>In order to improve their performance.</li>
+        </ol>
+        <p>Organizations know when they are doing well (or poorly) at product accessibility via audit reports and bug counts.  However, they don’t know how well they are doing as an organization to continue to produce accessible products without looking at other supporting corporate processes.  ​Maturity Modeling is a big part of a “shift-left” methodology of preventing problems from recurring, not fixing them after they have happened.</p>
+
+        <p>Most maturity models contain some number of levels with increasing maturity.  Each level contains a definition, controls, and a list of processes and evidence that must be produced for an organization to legitimately claim that they are at a particular level of maturity.</p>
+
+        <p>Maturity modeling is very different than conformance testing </p>
+        <ul>
+          <li>Conformance testing provides information about the accessibility level(s) of a particular product.  The results of a conformance test provide a picture of a particular version of a product (or a subcomponent of a product).</li>
+          <li>Maturity modeling provides information about the ability of an organization to produce accessible products over the long term.  The results of a maturity modeling assessment provide a holistic picture of an organization’s accessibility initiatives, where accessibility is doing well, and where improvements, that remove and prevent barriers, can be made.</li>
+        </ul>
+      </section>
+      <section id="WCAG-maturity-model-audience"><div class="header-wrapper"><h3 id="x1-2-w3c-accessibility-maturity-model-audience"><bdi class="secno">1.2 </bdi><abbr title="World Wide Web Consortium">W3C</abbr> Accessibility Maturity Model Audience</h3><a class="self-link" href="#WCAG-maturity-model-audience" aria-label="Permalink for Section 1.2"></a></div>
+        
+        <p>This document is intended to guide and evaluate the levels of organizational accessibility maturity that encompasses a public or private sector organization at any scale.</p>
+        <p>Examples of organizations might be (but not limited to):</p>
+        <ul>
+          <li>A government agency (Federal, state/province, county/city, municipality, etc.)</li>
+          <li>Any type of business entity (including a sole proprietorship, corporation, or LLC)</li>
+          <li>Learning institutions (university, college, district school system)</li>
+          <li>A nongovernmental organization (NGO) or non-profit</li>
+        </ul>
+        <p>The primary audience for this maturity model would be:</p>
+        <ul>
+          <li>Executive levels of organization leadership responsible for leading the organization.</li>
+          <li>Other levels of management responsible for maturity of the defined dimensions.</li>
+          <li>Policy and business process subject matter experts responsible for putting plans, actions, and metrics in place.</li>
+        </ul>
+        <section id="scope"><div class="header-wrapper"><h4 id="x1-2-1-scope"><bdi class="secno">1.2.1 </bdi>Scope</h4><a class="self-link" href="#scope" aria-label="Permalink for Section 1.2.1"></a></div>
+          
+          <p>This document may also be used to measure the maturity level of parts of the organization, provided that the scope is clearly identified in any reports submitted to third-parties.</p>
+        </section>
+      </section>
+      <section id="existing-research"><div class="header-wrapper"><h3 id="x1-3-existing-research"><bdi class="secno">1.3 </bdi>Existing Research</h3><a class="self-link" href="#existing-research" aria-label="Permalink for Section 1.3"></a></div>
+        
+        <p>Reference appendix with summary of the existing six maturity models outside of WCAG.</p>
+      </section>
+      <section id="open-questions"><div class="header-wrapper"><h3 id="x1-4-open-questions"><bdi class="secno">1.4 </bdi>Open Questions</h3><a class="self-link" href="#open-questions" aria-label="Permalink for Section 1.4"></a></div>
+        
+        <p>This is a first draft and there are a number of issues are still to be determined that we would like comment from the public on:</p>
+        <ol>
+          <li>Should the Maturity Model identify stakeholders for each dimension?</li>
+          <li>We have proposed three variations of spreadsheet formats, which can be found at the following spreadsheet tabs:
+            <ol type="a">
+              <li>Procurement uses variation 1</li>
+              <li>Knowledge &amp; Skills uses variation 2</li>
+              <li>Policy uses variation 3</li>
+              
+            </ol>
+          </li>
+          
+          
+        </ol>
+        <div class="note" id="issue-container-generatedID"><div role="heading" class="ednote-title marker" id="h-ednote" aria-level="4"><span>Editor's note</span></div><p class="">Once we have feedback on which alternative is preferred, the other dimensions will migrate their spreadsheet format.</p></div>
+      </section>
+    </section>
+    <section id="maturity-model-dimensions"><div class="header-wrapper"><h2 id="x2-maturity-model-dimensions"><bdi class="secno">2. </bdi>Maturity Model "Dimensions"</h2><a class="self-link" href="#maturity-model-dimensions" aria-label="Permalink for Section 2."></a></div>
+      
+      <p>This Accessibility Maturity Model is organized around seven “Dimensions.” Each dimension represents an aspect of an organization where maturity in accessibility is needed to improve compliance with Web Content Accessibility Guidelines. Dimensions include:</p>
+      <ul>
+        <li>Communications</li>
+        <li>Knowledge and Skills</li>
+        <li>Support</li>
+        <li>ICT Development Lifecycle</li>
+        <li>Personnel</li>
+        <li>Procurement</li>
+        <li>Culture</li>
+      </ul>
+      <p>Figure 1 shows the core structure of the Maturity Model. The Maturity Model has Four stages of content with associated documentation. Dimensions form the top level. Each dimension contains:</p>
+      <ul>
+        <li>Core, staged criteria for what is needed to reach the full maturity of that dimension, which is the “Optimize” stage.</li>
+        <li>One or more maturity proof points, with descriptions.</li>
+      </ul>
+      <section id="dimensional-maturity-stages"><div class="header-wrapper"><h3 id="x2-1-dimensional-maturity-stages"><bdi class="secno">2.1 </bdi>Dimensional Maturity Stages</h3><a class="self-link" href="#dimensional-maturity-stages" aria-label="Permalink for Section 2.1"></a></div>
+        
+        <p>Each dimension will contain  stages” based on the proof points that are demonstrated. Stages loosely correspond to the following criteria.  Each dimension will contain defined criteria that pertain specifically to the dimension being defined. Stages are cumulative, so stage advancement  cannot be achieved without first meeting the specific criteria of a lower level.  The terms for the stages were adopted for consistency with the <a href="https://www.nascio.org/resource-center/?selectedTopic=accessibility">Policy Driven Adoption Maturity Model</a>, currently being used by multiple government agencies.</p>
+        <table>
+          <tbody><tr>
+            <th>Stages</th>
+            <th>Criteria</th> 
+          </tr>
+          <tr>
+            <td><strong>Inactive</strong></td>
+            <td>No awareness and recognition of need.</td> 
+          </tr>
+          <tr>
+            <td><strong>Launch</strong></td>
+            <td>Recognized need organization-wide. Planning initiated, but activities not well organized.</td> 
+          </tr>
+          <tr>
+            <td><strong>Integrate</strong></td>
+            <td>Roadmap in place, overall organizational approach defined and well organized</td> 
+          </tr>
+          <tr>
+            <td><strong>Optimize</strong></td>
+            <td>Full organization insights, consistently evaluated, and actions taken on assessment outcomes.</td> 
+          </tr>
+        </tbody></table>
+      </section>
+      <section id="dimensions-structure"><div class="header-wrapper"><h3 id="x2-2-dimensions-structure"><bdi class="secno">2.2 </bdi>Dimensions structure</h3><a class="self-link" href="#dimensions-structure" aria-label="Permalink for Section 2.2"></a></div>
+        
+        <p>Dimensions provide a unique descriptive name with a high-level, plain-language summary of the content for organizations, managers, policy makers, individuals who are new to accessibility, and other individuals who need to understand the concepts but not dive into the technical details.</p>
+        <p>Dimensions provide an easy-to-understand way of organizing and presenting the outcomes so non-experts can learn about and understand the concepts. Dimensions address organizational needs on specific topics, such as education, documentation, communication, and more. Dimension Proof Points may be customized based on organizational needs organization-independent.</p>
+        <p>Dimensions:</p>
+        <ul>
+          <li><strong>Communications: </strong>Information as it relates to an organization’s accessibility, as well as accessibility of all internal/external communications.</li>
+          <li><strong>Knowledge and Skills: </strong>Ongoing education, and outsourcing practices to fill gaps for accessibility operations.</li>
+          <li><strong>Support: </strong>Accessibility assistance provided to internal employees and external customers with disabilities.</li>
+          <li><strong>ICT (Information Communication Technology) Development Life Cycle: </strong>Accessibility for the software / hardware development path from idea conception, to design, development, testing, ACR/VPAT production, user research, maintenance and obsolescence.</li>
+          <li><strong>Personnel: </strong>Job descriptions, recruiting, disability-related employee resource groups necessary to provide lived-experience to accessibility efforts.</li>
+          <li><strong>Procurement: </strong>A strategic process that concentrates on finding and acquiring accessible products required for an organization. Activities may include: sourcing activities, negotiation, and selecting goods and services.</li>
+          <li><strong>Culture: </strong>The attitudes, sensitivity, and behaviors around accessibility, including internal interaction, perception, and decision-making.</li>
+        </ul>
+      </section>
+      <section id="Outcomes"><div class="header-wrapper"><h3 id="x2-3-outcomes"><bdi class="secno">2.3 </bdi>Outcomes</h3><a class="self-link" href="#Outcomes" aria-label="Permalink for Section 2.3"></a></div>
+        
+        <p>Each dimension has one or more desired outcomes for each stage. Progress towards achieving maturity is attained by creating the proof points described for each dimension. Each maturity model dimension contains a graduated set of stages of maturity attainment that as met define where the organization is along the dimension continuum.</p>
+        <p>Outcomes form the basis of a flexible and expansive architecture for maturity modeling that closely relates to the needs of organizations. Consistent with WCAG 3.0, outcomes determine whether the need defined by the maturity modeling stages has been met.</p>
+        <p>All relevant outcomes must be addressed but not all outcomes will apply to all organizations and situations. When an outcome does not apply, it is marked N/A (Not applicable).</p>
+        <p>Example: Policy does not need to reference native apps if the organization has no native apps.</p>
+      </section>
+      <section id="proof-points"><div class="header-wrapper"><h3 id="x2-4-proof-points"><bdi class="secno">2.4 </bdi>Proof Points</h3><a class="self-link" href="#proof-points" aria-label="Permalink for Section 2.4"></a></div>
+        
+        <p>Each dimensional outcome has a range of suggested proof points, which includes any evidence or necessary measures that can be used to ascertain  the maturity of each dimension.</p>
+        <ol>
+          <li>Proof points are evidence-based, organizational deliverables which indicate the maturity stage as described earlier in this document.</li>
+          <li>Proof points should be at the level at which the maturity model assessment is taking place.  For example, if only procurement maturity is being measured, only procurement proof points should be evaluated.</li>
+          <li>For more complicated dimensions, proof points are organized by category.</li>
+          <li>Proof points can be partially completed at the Launch and Integrate stages, but must be fully completed for the optimize stage.</li>
+        </ol>
+        <p>For example, if a dimension requires a plan to identify ICT Accessibility related skill levels and gaps, then the corresponding proof point would be the document containing completed evaluation of ICT Accessibility related skill levels and gaps.</p>
+        <section id="description"><div class="header-wrapper"><h4 id="x2-4-1-description"><bdi class="secno">2.4.1 </bdi>Description</h4><a class="self-link" href="#description" aria-label="Permalink for Section 2.4.1"></a></div>
+          
+          <p>Each proof point includes a high-level description. Deliverables are mostly self-explanatory, but in some cases, additional information is provided.</p>
+        </section>
+        <section id="proof-point-examples"><div class="header-wrapper"><h4 id="x2-4-2-proof-point-examples"><bdi class="secno">2.4.2 </bdi>Proof Point Examples</h4><a class="self-link" href="#proof-point-examples" aria-label="Permalink for Section 2.4.2"></a></div>
+          
+          <p>Examples of proof points are included for each dimension.</p>
+        </section>
+        <section id="maturity-stages"><div class="header-wrapper"><h4 id="x2-4-3-maturity-stages"><bdi class="secno">2.4.3 </bdi>Maturity Stages</h4><a class="self-link" href="#maturity-stages" aria-label="Permalink for Section 2.4.3"></a></div>
+          
+          <p>Each dimension includes proof points at the various maturity stages.</p>
+        </section>
+      </section>
+      <section id="maturity-model-assessment-template"><div class="header-wrapper"><h3 id="x2-5-maturity-model-assessment-template"><bdi class="secno">2.5 </bdi>Maturity Model Assessment Template</h3><a class="self-link" href="#maturity-model-assessment-template" aria-label="Permalink for Section 2.5"></a></div>
+        
+        <p>Organizational ICT Accessibility Maturity is assessed using the ICT Accessibility Maturity Assessment Template. The template contains worksheet tabs specific to each dimension.  The dimension tabs are organized with the dimension definitions and outcomes for each of the 4 maturity stages and provides a list of the dimension’s proof points.</p>
+        <p>The blank cells below each maturity stage are to be completed by the organization and should contain evidence that the organization has reached that stage. The evidence can include progress on proof point completion, or other relevant information that can be used to claim that the outcomes for that stage have been met.</p>
+        <p>Proof points can span across multiple stages, work being initiated in one stage and completed in a more advanced stage.</p>
+        <p>A link to the worksheet is <a href="https://docs.google.com/spreadsheets/d/1fzPlHjHIaSQn9GvpJd86SDpV49U8Beg_iXj6K5aeyGg/edit#gid=67813499">HERE</a>.</p>
+      </section>
+    </section>
+    <section id="the-dimensions"><div class="header-wrapper"><h2 id="x3-the-dimensions"><bdi class="secno">3. </bdi>The Dimensions</h2><a class="self-link" href="#the-dimensions" aria-label="Permalink for Section 3."></a></div>
+      
+      <section id="Communications"><div class="header-wrapper"><h3 id="x3-1-communications"><bdi class="secno">3.1 </bdi>Communications</h3><a class="self-link" href="#Communications" aria-label="Permalink for Section 3.1"></a></div>
+        
+        <p>Communications, whether internal or external, formal or informal, minor or major, need to be accessible to the widest audience possible. Accessible communication is an umbrella term to describe communication that is clear, direct, easy to understand and that can be made available in multiple formats so that all users have equal access. It takes into consideration the various barriers to accessing information, and removes these or provides alternative formats for the communication to take place. Also, accessibility efforts should be communicated so that users are aware of the extent to which they can interact with content.</p>
+        <p>Dimension: Measure if communications, Internal and external, are accessible, accessibility-related communications to demonstrate the overall approach toward accessibility, and WCAG compliance.</p>
+        <section id="communications-proof-points"><div class="header-wrapper"><h4 id="x3-1-1-proof-points"><bdi class="secno">3.1.1 </bdi>Proof Points</h4><a class="self-link" href="#communications-proof-points" aria-label="Permalink for Section 3.1.1"></a></div>
+          
+          <p>May include but are not limited to:</p>
+          <section id="direct-communications"><div class="header-wrapper"><h5 id="x3-1-1-1-direct-communications"><bdi class="secno">3.1.1.1 </bdi>Direct communications</h5><a class="self-link" href="#direct-communications" aria-label="Permalink for Section 3.1.1.1"></a></div>
+            
+            <ul>
+              <li>Statement of commitment</li>
+              <li>Accessibility statement
+                <ul>
+                  <li>Link to the accessibility statement (in the footer or on the web page /accessibility)</li>
+                  <li>Link to compliance documentation, such as one or more:
+                    <ul>
+                      <li>Accessibility conformance reports (ACR),</li>
+                      <li>Voluntary product accessibility templates (VPAT), or</li>
+                      <li>Statements based on a model accessibility statement (legal requirement for public sector bodies in the European Union).</li>
+                    </ul>
+                  </li>  
+                </ul>
+              </li>
+              <li>Information on customer support
+                <ul>
+                  <li>Section on support for persons with disabilities</li>
+                  <li>Feedback mechanism for handling questions and accessibility complaints</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section id="preconditions-for-accessible-communication"><div class="header-wrapper"><h5 id="x3-1-1-2-preconditions-for-accessible-communication"><bdi class="secno">3.1.1.2 </bdi>Preconditions for accessible communication</h5><a class="self-link" href="#preconditions-for-accessible-communication" aria-label="Permalink for Section 3.1.1.2"></a></div>
+            
+            <ul>
+              <li>Accessible corporate document templates (word, ppt, etc.), including HTML or PDF conversion procedures that prevent the loss of available accessibility features</li>
+            </ul>
+          </section>
+        </section>
+        <section id="communications-ratings-for-evaluation"><div class="header-wrapper"><h4 id="x3-1-2-ratings-for-evaluation"><bdi class="secno">3.1.2 </bdi>Ratings for Evaluation</h4><a class="self-link" href="#communications-ratings-for-evaluation" aria-label="Permalink for Section 3.1.2"></a></div>
+          
+          <table>
+            <tbody><tr>
+              <th>Maturity stages</th>
+              <th>Criteria</th>
+            </tr>
+            <tr>
+              <th>Inactive</th>
+              <td>
+                <strong>Definition:</strong> No effort towards achieving ICT accessibility  maturity, possibly some informal activities.
+                <p><strong>Outcomes:</strong></p> 
+                <ul>
+                  <li>None; no accessibility effort at all around communications</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>Launch</th>
+              <td>
+                <strong>Definition:</strong> Recognized need for ICT accessibility maturity. Planning initiated, but activities not well organized.
+                <p><strong>Outcomes:</strong></p> 
+                <ul>
+                  <li>Generic statement about accessibility on the website.</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>Integrate</th>
+              <td>
+                <strong>Definition:</strong> ICT accessibility roadmap in place, overall organizational approach defined.  Process integration for ICT accessibility maturity in progress. Not consistently implemented across all operations.
+                <p><strong>Outcomes:</strong></p> 
+                <ul>
+                  <li>An accessibility policy that includes:
+                    <ul>
+                      <li>One or more objectives,</li>
+                      <li>Dates for delivering improvements,</li>
+                      <li>Accessibility guidelines for social media posting,</li>
+                      <li>Employee communications.</li>
+                    </ul>
+                  </li>
+                  <li>Accessibility statement based on report(s) of accessibility audit(s)</li>
+                  <li>A feedback mechanism for users, including a formalized process for handling accessibility complaints.</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>Optimize</th>
+              <td>
+                <p><strong>Definition:</strong> Full ICT accessibility maturity. Accessibility is consistently implemented across all operations. Mechanisms for continuous improvement of accessibility processes are in place. Actions that are taken are based on the assessment of the various outcomes.</p>
+                <p><strong>Outcomes:</strong></p> 
+                <ul>
+                  <li>The outcomes mentioned under Midstage Maturity</li>
+                  <li>In large organizations, the state of accessibility is an agenda item on the organization's Supervisory Board meeting (minimum frequency: yearly),</li>
+                  <li>The agenda item must at least report on (when applicable):
+                    <ul>
+                      <li>The accessibility status of each website and mobile application,</li>
+                      <li>The progress that made since the last report,</li>
+                      <li>The outcome of the feedback mechanism for accessibility complaints,</li>
+                      <li>The operational effectiveness of the social media posting policy,</li>
+                      <li>Evaluation of the sufficiency of the organization's accessibility knowledge and skills (K&amp;S),</li>
+                      <li>An assessment of the risks that are caused by not fully complying (or not knowing the compliance level).</li>
+                    </ul>
+                  </li>
+                  <li>The agenda item may also include:
+                    <ul>
+                      <li>Surveys on user satisfaction of accessibility,</li>
+                      <li>Other accessibility related topics</li>
+                    </ul>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody></table>
+        </section>  
+      </section>
+      <section id="knowledge-and-skills"><div class="header-wrapper"><h3 id="x3-2-knowledge-and-skills"><bdi class="secno">3.2 </bdi>Knowledge and Skills</h3><a class="self-link" href="#knowledge-and-skills" aria-label="Permalink for Section 3.2"></a></div>
+        
+        <p><strong>Introduction:</strong> Internal and external personnel at all levels of an organization must have <abbr title="World Wide Web Consortium">W3C</abbr> accessibility knowledge and skills that are relevant to their organizational role as a manager, product or content producer. Accessibility knowledge and skills relevant to each individual’s position helps to implement checks and balances needed as for quality assurance.</p>
+        <p><strong>Measures:</strong> education, individual experience, stakeholder responsibilities, departments, or units. Takes into account the use of external sources to bridge inclusiveness and accessibility gaps.</p>
+        <section id="knowledge-and-skills-proof-points"><div class="header-wrapper"><h4 id="x3-2-1-proof-points"><bdi class="secno">3.2.1 </bdi>Proof Points</h4><a class="self-link" href="#knowledge-and-skills-proof-points" aria-label="Permalink for Section 3.2.1"></a></div>
+          
+          <section id="hires-external-knowledge-and-skills"><div class="header-wrapper"><h5 id="x3-2-1-1-hires-external-knowledge-and-skills"><bdi class="secno">3.2.1.1 </bdi>Hires External Knowledge and Skills</h5><a class="self-link" href="#hires-external-knowledge-and-skills" aria-label="Permalink for Section 3.2.1.1"></a></div>
+            
+            <p>Identifies necessary, and preferred knowledge and skills per role, per project, per organization, via Internal systems, internet, direct contact, print.</p>
+            <ul>
+              <li>External hire</li>
+              <li>External support line</li>
+              <li>External audits</li>
+              <li>External development</li>
+              <li>Procured products / services</li>
+            </ul>
+          </section>
+          <section id="offers-documentation-and-resources"><div class="header-wrapper"><h5 id="x3-2-1-2-offers-documentation-and-resources"><bdi class="secno">3.2.1.2 </bdi>Offers Documentation and Resources</h5><a class="self-link" href="#offers-documentation-and-resources" aria-label="Permalink for Section 3.2.1.2"></a></div>
+            
+            <p>Through internal systems, the internet, direct contact, print</p>
+            <ul>
+              <li>Internal Systems</li>
+              <li>Referring to External Resources</li>
+              <li>Implementation documentation (of design system)</li>
+              <li>Direct SME, Champs hotline</li>
+              <li>Social media channel</li>
+              <li>Communication expressions (e.g. posters)</li>
+            </ul>
+          </section>
+          <section id="offers-training"><div class="header-wrapper"><h5 id="x3-2-1-3-offers-training"><bdi class="secno">3.2.1.3 </bdi>"Offers Training"</h5><a class="self-link" href="#offers-training" aria-label="Permalink for Section 3.2.1.3"></a></div>
+            
+            <p>Through Interview, Questionnaire, Certification, CV.</p>
+            <ul>
+              <li>Refer to External courses</li>
+              <li>Series of External / Internal Workshops</li>
+              <li>Basic awareness training for all staff</li>
+              <li>Onboarding for new employees</li>
+              <li>Tailored Program per Role</li>
+              <li>Organising or Attending of events</li>
+              <li>Empathy Lab</li>
+              <li>Availability of External Experts</li>
+              <li>Availability of buddy</li>
+              <li>Communication expressions (e.g. posters)</li>
+            </ul>
+          </section>
+          <section id="conveys-insights-of-knowledge-and-skills"><div class="header-wrapper"><h5 id="x3-2-1-4-conveys-insights-of-knowledge-and-skills"><bdi class="secno">3.2.1.4 </bdi>Conveys Insights of Knowledge and Skills</h5><a class="self-link" href="#conveys-insights-of-knowledge-and-skills" aria-label="Permalink for Section 3.2.1.4"></a></div>
+            
+            <p>Through Interview, Questionnaire, Certification, CV.</p>
+            <ul>
+              <li>Assessments of skill gaps across the organization;</li>
+              <li>Investigation of educational efforts;</li>
+              <li>Clearance on working experience;</li>
+              <li>Embedded and secured in organizational planning and strategy;</li>
+              <li>Certification / competency reviews.</li>
+            </ul>
+          </section>
+        </section>
+        <section id="knowledge-ratings-for-evaluation"><div class="header-wrapper"><h4 id="x3-2-2-ratings-for-evaluation"><bdi class="secno">3.2.2 </bdi>Ratings for Evaluation</h4><a class="self-link" href="#knowledge-ratings-for-evaluation" aria-label="Permalink for Section 3.2.2"></a></div>
+          
+          <table>
+            <tbody><tr>
+              <th>Maturity stages</th>
+              <th>Criteria</th>
+            </tr>
+            <tr>
+              <th>Inactive</th>
+              <td>
+                <strong>Definition:</strong> No efforts to develop <abbr title="World Wide Web Consortium">W3C</abbr> accessibility or disability inclusion expertise.
+                <p><strong>Outcomes:</strong></p> 
+                <ul>
+                  <li>None; no accessibility effort at all around developing accessibility, or disability inclusion, knowledge and skills.</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>Launch</th>
+              <td>
+                <strong>Definition:</strong> Recognized need for organization-wide accessibility, and disability inclusion, expertise. Planning initiated, but activities not well organized.
+                <p><strong>Outcomes:</strong></p> 
+                <ul>
+                  <li>Organization allows employees to take training at their own will, but professional development is not required or monitored.</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>Integrate</th>
+              <td>
+                <strong>Definition:</strong> ICT accessibility workforce development roadmap in place, overall organizational approach to evaluating accessibility, and disability inclusion, expertise is defined. Process integration for maturing ICT accessibility, and disability inclusion, knowledge and skills in progress. Not consistently implemented across the organization.
+                <p><strong>Outcomes:</strong></p> 
+                <ul>
+                  <li>Workforce development plan that includes:
+                    <ul>
+                      <li>Professional development objectives,
+                        <ul>
+                          <li>Knowledge and skills assessments,</li>
+                          <li>Available training</li>
+                          <li>Maintains current with new technologies, platforms, tools</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>Training is made available to enhance knowledge and skills around ICT accessibility, and disability inclusion</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>Optimize</th>
+              <td>
+                <strong>Definition:</strong> Full organization ICT accessibility maturity. Organization-wide, role-based, expertise in accessibility, and disability inclusion, are well-defined, evaluated, remediated, and continuously enhanced. Accessibility knowledge and skills are consistently implemented across the organization.
+                <p><strong>Outcomes:</strong></p> 
+                <ul>
+                  <li>Necessary and preferred knowledge and skills are consistently communicated for all personnel
+                    <ul>
+                      <li>Position descriptions</li>
+                      <li>Hiring announcements</li>
+                      <li>Project management</li>
+                    </ul>
+                  </li>
+                  <li>Workforce is periodically evaluated for knowledge and skills parity with current industry trends.
+                    <ul>
+                      <li>Periodic gap analysis</li>
+                    </ul>
+                  </li>
+                  <li>Annual training (conferences, events, online, etc) is provided to maintain parity in current ICT accessibility, and disability inclusion, industry expertise.
+                    <ul>
+                      <li>Certification programs implemented</li>
+                    </ul>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody></table>
+        </section>
+      </section>
+      <section id="support"><div class="header-wrapper"><h3 id="x3-3-support"><bdi class="secno">3.3 </bdi>Support</h3><a class="self-link" href="#support" aria-label="Permalink for Section 3.3"></a></div>
+        
+        <p>Dimension: Support for internal employees and external customers with disabilities. This includes reasonable accommodations (adjustments) for employees and customer support that is specific to users' accessibility needs.</p>
+        <section id="support-proof-points"><div class="header-wrapper"><h4 id="x3-3-1-proof-points"><bdi class="secno">3.3.1 </bdi>Proof Points</h4><a class="self-link" href="#support-proof-points" aria-label="Permalink for Section 3.3.1"></a></div>
+          
+          <p>Support artifacts may include but are not limited to:</p>
+          <ul>
+            <li>Written policy on requesting and providing employee accommodations</li>
+            <li>Publicly available (and accessible) web accessibility statement including method(s) to contact customer support</li>
+            <li>Help topics and/or FAQs specific to accessibility</li>
+            <li>Training in disability awareness and inclusion for HR and hiring managers</li>
+            <li>Training for customer support agents (or internal IT support staff) in accessibility, assistive technology and disability etiquette/awareness</li>
+            <li>Existence of a disability-focused employee resource group (ERG) with executive sponsorship</li>
+	    <li>Validation process in place to manage accessibility feedback</li>
+	    <li>Accessibility feedback is incorporated for conformance of identified ICT</li>
+          </ul>
+        </section>
+        <section id="maturity-stages-0"><div class="header-wrapper"><h4 id="x3-3-2-maturity-stages"><bdi class="secno">3.3.2 </bdi>Maturity Stages</h4><a class="self-link" href="#maturity-stages-0" aria-label="Permalink for Section 3.3.2"></a></div>
+          
+          <table>
+            <tbody><tr>
+              <th>Maturity stages</th>
+              <th>Criteria</th>
+            </tr>
+            <tr>
+              <th>Inactive</th>
+              <td>
+                <strong>Definition:</strong> No accessibility effort at all around support for employees or customers.
+              </td>
+            </tr>
+            <tr>
+              <th>Launch</th>
+              <td>
+                <strong>Definition:</strong>  Plans in place to provide basic information about accessibility to customers.
+                <p><strong>Outcomes:</strong></p> 
+                <ul>
+                  <li>Written reasonable accommodation policy/process in place
+                    <ul>
+                      <li>disseminated to all employees, and customers (could be a policy statement link on site).</li>
+                    </ul>
+                  </li>
+                  <li>No external support for K&amp;S</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>Integrate</th>
+              <td>
+                <strong>Definition:</strong> Customers: Dedicated section on Accessibility in the Help section of customer-facing website. FAQ or Help topics include common accessibility questions and answers.
+                <p><strong>Outcomes:</strong></p> 
+                <ul>
+                  <li>Employees: Tools and process in place to facilitate requests for accommodations.  Hiring managers have access to disability awareness training.</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>Optimize</th>
+              <td>
+                <strong>Definition:</strong> Customers: Fully trained customer support staff able to support users' accessibility questions. Multiple ways to communicate with technical support are provided that meet the needs of customers with disabilities.
+                <p><strong>Outcomes:</strong></p> 
+                <ul>
+                  <li>Employees/Talent Acquisition: Candidates are offered accommodations for their interviews. Disability Employee Resource Group(s) provide social and professional support to employees with disabilities.</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody></table>
+        </section>
+      </section>
+      <section id="ict-development-lifecycle"><div class="header-wrapper"><h3 id="x3-4-ict-development-lifecycle"><bdi class="secno">3.4 </bdi>ICT Development Lifecycle</h3><a class="self-link" href="#ict-development-lifecycle" aria-label="Permalink for Section 3.4"></a></div>
+        
+        <p>Accessible Information and communication technologies (ICT) serves as a critical enabler that allow persons with disabilities to realise full and effective opportunities to participate, on the basis of equality, in all aspects of society and development that involve technology.  Accessibility must be considered throughout the entire ICT development lifecycle: from idea conception, to design, development, testing, ACR/VPAT production, user research, maintenance and obsolescence.</p>
+        <section id="development-lifecycle-proof-points"><div class="header-wrapper"><h4 id="x3-4-1-proof-points"><bdi class="secno">3.4.1 </bdi>Proof Points</h4><a class="self-link" href="#development-lifecycle-proof-points" aria-label="Permalink for Section 3.4.1"></a></div>
+          
+          <p>ICT development lifecycle artifacts may include but are not limited to:</p>
+          <section id="design"><div class="header-wrapper"><h5 id="x3-4-1-1-design"><bdi class="secno">3.4.1.1 </bdi>Design</h5><a class="self-link" href="#design" aria-label="Permalink for Section 3.4.1.1"></a></div>
+            
+            <ul>
+              <li>Color contrasts regularly measured for new/modified text and relevant non-text objects such as activatable components and keyboard focus indicators</li>
+              <li>Accessible design review process templates, checklists, and output</li>
+              <li>Consistent approach to designing accessibility features across products</li>
+            </ul>
+          </section>
+          <section id="development"><div class="header-wrapper"><h5 id="x3-4-1-2-development"><bdi class="secno">3.4.1.2 </bdi>Development</h5><a class="self-link" href="#development" aria-label="Permalink for Section 3.4.1.2"></a></div>
+            
+            <ul>
+              <li>Accessible developer implementation resources
+                <ul>
+                  <li>Team channels to discuss accessibility - Slack, office hours, email</li>
+                  <li>Information pages</li>
+                </ul>
+              </li>
+              <li>Developers accessibility checklists</li>
+              <li>Consistent approach to implementing accessibility features across products</li>
+            </ul>
+          </section>
+          <section id="user-experience"><div class="header-wrapper"><h5 id="x3-4-1-3-user-experience"><bdi class="secno">3.4.1.3 </bdi>User Experience</h5><a class="self-link" href="#user-experience" aria-label="Permalink for Section 3.4.1.3"></a></div>
+            
+            <ul>
+              <li>User research includes disabilities
+                <ul>
+                  <li>All research asks participants to anonymously identify whether or not they have a disability, and if so, what type of disability/ies</li>
+                </ul>
+              </li>
+            </ul>
+            <p>User research focusing only on disabilities is performed</p>
+          </section> 
+          <section id="quality-review-release"><div class="header-wrapper"><h5 id="x3-4-1-4-quality-review-release"><bdi class="secno">3.4.1.4 </bdi>Quality Review / Release</h5><a class="self-link" href="#quality-review-release" aria-label="Permalink for Section 3.4.1.4"></a></div>
+            
+            <ul>
+              <li>Testing process that includes documented steps for manual accessibility testing, utilizing assistive technology</li>
+              <li>Testing process that includes automated accessibility testing</li>
+              <li>Schedule which includes stakeholder activities focused on accessibility</li>
+              <li>Bug tracking system that includes “accessibility” category</li>
+              <li>Prioritization and grooming system for accessibility defects</li>
+              <li>Accessibility identified as product release gate</li>
+              <li>Documented testing steps for updates that do not go through a full release cycle:
+                <ul>
+                  <li>Content review for website updates</li>
+                  <li>Content review for social media posts</li>
+                </ul>
+              </li>
+              <li>Consistent approach to testing and releasing products</li>
+              <li>ACR/VPAT authoring guide for commercial off-the-shelf (COTS) products</li>              
+            </ul>
+          </section>         
+        </section>
+        <section id="development-lifecycle-ratings-for-evaluation"><div class="header-wrapper"><h4 id="x3-4-2-ratings-for-evaluation"><bdi class="secno">3.4.2 </bdi>Ratings for evaluation</h4><a class="self-link" href="#development-lifecycle-ratings-for-evaluation" aria-label="Permalink for Section 3.4.2"></a></div>
+          
+          <table>
+            <tbody><tr>
+              <th>Maturity stages</th>
+              <th>Criteria</th>
+            </tr>
+            <tr>
+              <th>Inactive</th>
+              <td>
+                <strong>Definition:</strong> No accessibility effort at all around ICT development.
+                <p><strong>Outcomes:</strong></p>
+                <ul>
+                  <li> If ACRs/VPATs are required, they are not being produced.</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>Launch</th>
+              <td>
+                <strong>Definition:</strong> Some awareness and recognition of the need for accessible ICT development, accidentally approached, decentralized.
+                <p><strong>Outcomes:</strong></p> 
+                <ul>
+                  <li>May be limited in scope to new products, apps, websites.</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>Integrate</th>
+              <td>
+                <strong>Definition:</strong> Organizational effort and approach for improving accessibility ICT development per role / discipline.
+                <p><strong>Outcomes:</strong></p> 
+                <ul>
+                  <li>Accessibility requirements are considered and practiced during ICT design, development, and testing, but are not consistently applied across the IT portfolio.</li>
+                  <li>Some attempt is made to remediate existing products, apps, and websites.</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>Optimize</th>
+              <td>
+                <strong>Definition:</strong> Thought leader in Accessibility on ICT development with strong ICT development knowledge and skills, structural, standardized and reported approach.
+                <p><strong>Outcomes:</strong></p> 
+                <ul>
+                  <li>Design specifications include accessibility guidance, developers create accessible UI consistently, both manual and automated accessibility testing during development, automated accessibility testing is incorporated into CI/CD build pipelines,</li>
+                  <li>and release management includes gates for accessibility quality.  Maintenance releases are re-inspected for accessibility If required, ACRs/VPATs are kept up to date and made available publicly.</li>
+                  <li>Research deliberately seeks and evaluates input from users with disabilities.</li>
+                </ul>
+              </td>
+            </tr>            
+          </tbody></table>
+        </section>
+      </section>
+      <section id="personnel"><div class="header-wrapper"><h3 id="x3-5-personnel"><bdi class="secno">3.5 </bdi>Personnel</h3><a class="self-link" href="#personnel" aria-label="Permalink for Section 3.5"></a></div>
+        
+        <p>Introduction: Persons with disabilities should be utilized throughout an organization’s hierarchy (all job types, all authority levels) where their unique insights and lived experiences should better inform decision making. This requires accessible and inclusive hiring practices covering application, interviews, evaluations, onboarding and retention.</p>
+        <section id="personnel-proof-points"><div class="header-wrapper"><h4 id="x3-5-1-proof-points"><bdi class="secno">3.5.1 </bdi>Proof Points</h4><a class="self-link" href="#personnel-proof-points" aria-label="Permalink for Section 3.5.1"></a></div>
+          
+          <section id="targeted-recruiting"><div class="header-wrapper"><h5 id="x3-5-1-1-targeted-recruiting"><bdi class="secno">3.5.1.1 </bdi>Targeted Recruiting</h5><a class="self-link" href="#targeted-recruiting" aria-label="Permalink for Section 3.5.1.1"></a></div>
+            
+           
+            <ul>
+              <li>Established goals for recruiting employees with disabilities</li> 
+              <li>Hiring announcements with diversity statements encouraging applications from people with disabilities</li>
+              <li>Recruiting needs assessment/gap analysis</li>
+              <li>Preferential hiring initiatives to recruit employees with disabilities</li>
+              <li>Hiring announcements with targeted diversity statements narrowing eligibility to applicants with disabilities</li>
+            </ul>
+          </section>
+          <section id="accessible-job-application-platform"><div class="header-wrapper"><h5 id="x3-5-1-2-accessible-job-application-platform"><bdi class="secno">3.5.1.2 </bdi>Accessible Job Application Platform</h5><a class="self-link" href="#accessible-job-application-platform" aria-label="Permalink for Section 3.5.1.2"></a></div>
+            
+            <ul>
+              <li>Hiring tools, job boards, etc. meet a specified level of accessibility</li>
+              <li>Recruiting communications meet a specified level of accessibility</li>
+              <li>Accessibility audit of Jobs' website</li>
+              <li>Accessibility audit of application process</li>
+            </ul>
+          </section>
+          <section id="strategic-engagement"><div class="header-wrapper"><h5 id="x3-5-1-3-strategic-engagement"><bdi class="secno">3.5.1.3 </bdi>Strategic Engagement</h5><a class="self-link" href="#strategic-engagement" aria-label="Permalink for Section 3.5.1.3"></a></div>
+            
+            <ul>
+              <li>Established Employee Resource Group, with executive sponsor, for employees with disabilities to directly contribute first hand knowledge, and lived experience, to accessibility efforts</li>
+              <li>Product, and project focus groups of employees with disabilities</li>
+              <li>Mentoring program for employees with disabilities</li>
+            </ul>
+          </section>
+        </section>
+        <section id="personnel-ratings-for-evaluation"><div class="header-wrapper"><h4 id="x3-5-2-ratings-for-evaluation"><bdi class="secno">3.5.2 </bdi>Ratings for Evaluation</h4><a class="self-link" href="#personnel-ratings-for-evaluation" aria-label="Permalink for Section 3.5.2"></a></div>
+          
+          <table>
+            <tbody><tr>
+              <th>Maturity stages</th>
+              <th>Criteria</th>
+            </tr>
+            <tr>
+              <th>Inactive</th>
+              <td>
+                <strong>Definition:</strong> No staffing effort towards achieving organization-wide ICT accessibility maturity by including people with disabilities in the workforce. Possibly some informal activities.
+                <p><strong>Outcomes:</strong></p>
+                <ul>
+                  <li> None; No effort at all around recruiting, retaining, or engaging employees with disabilities.</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>Launch</th>
+              <td>
+                <strong>Definition:</strong> Recognized need to include employees with disabilities in the workforce to contribute to organization-wide ICT accessibility maturity. Planning initiated, but recruitment, retention, and engagement, activities around disability inclusion are not well organized.
+                <p><strong>Outcomes:</strong></p> 
+                <ul>
+                  <li>Hiring announcements encourage applications from the disability community.</li>
+                  <li>Disability inclusion is specifically articulated in companies diversity and inclusion policy, and statement.</li>
+                  <li>Champion has been designated to facilitate, and mature disability inclusion. </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>Integrate</th>
+              <td>
+                <strong>Definition:</strong> Disability inclusion roadmap, to drive ICT accessibility, in place. Overall organizational approach to evaluating recruitment, retention, and engagement is defined. Process integration for maturing disability inclusion efforts for ICT accessibility in progress. Not consistently implemented across the organization.
+                <p><strong>Outcomes:</strong></p> 
+                <ul>
+                  <li>Strategic positions are identified for employees with disabilities to be placed in that will help audit, and drive, the development of accessible products, services.</li>
+                  <li>Targeted recruiting of employees with disabilities</li> 
+                  <li>Accessible recruiting process</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>Optimize</th>
+              <td>
+                <strong>Definition:</strong> Employees with disabilities are leveraged throughout the organization to achieve full ICT accessibility maturity. Organization-wide, disability inclusion staffing efforts are well-defined, evaluated, remediated, and integrated with ICT accessibility efforts, and goals, across the organization. Employees with disabilities hold key decision making positions, and are spread out across all areas of the organization to drive accessibility in every facet of the business. 
+                <p><strong>Outcomes:</strong></p> 
+                <ul>
+                  <li>Disability Employee Resource Group is leveraged to inform accessibility decision making.</li>
+                  <li>Employees with disabilities leveraged to audit accessibility.</li>
+                  <li>Employees with disabilities leveraged for product development.</li>
+                  <li>Employees with disabilities leveraged for development of accessible services.</li>
+                </ul>
+              </td>
+            </tr>            
+          </tbody></table>
+        </section>
+      </section>
+      <section id="procurement"><div class="header-wrapper"><h3 id="x3-6-procurement"><bdi class="secno">3.6 </bdi>Procurement</h3><a class="self-link" href="#procurement" aria-label="Permalink for Section 3.6"></a></div>
+        
+        <p>Procurement is a strategic process that concentrates on finding and acquiring cost-effective products required for an organization. It deals with things like sourcing activities, negotiation, and selecting goods and services.</p>
+        <p>With the majority of IT assets within an organization being the result of procurement transactions and contracts, ensuring that IT accessibility criteria are well integrated into the processes to bring this area into full maturity, which is the “Optimize” stage.</p>
+        <section id="procurement-proof-points"><div class="header-wrapper"><h4 id="x3-6-1-proof-points"><bdi class="secno">3.6.1 </bdi>Proof Points</h4><a class="self-link" href="#procurement-proof-points" aria-label="Permalink for Section 3.6.1"></a></div>
+          
+          <p>May include but not limited to:</p>
+          <section id="policy-documentation"><div class="header-wrapper"><h5 id="x3-6-1-1-policy-documentation"><bdi class="secno">3.6.1.1 </bdi>Policy Documentation</h5><a class="self-link" href="#policy-documentation" aria-label="Permalink for Section 3.6.1.1"></a></div>
+            
+            <ul>
+              <li>Published ICT Accessibility Policy</li>
+              <li>Accessibility requirements and other information communicated to vendors</li>
+            </ul>
+          </section>
+          <section id="consistent-contract-language"><div class="header-wrapper"><h5 id="x3-6-1-2-consistent-use-of-standardized-solicitation-and-contract-language"><bdi class="secno">3.6.1.2 </bdi>Consistent Use of Standardized Solicitation and Contract Language</h5><a class="self-link" href="#consistent-contract-language" aria-label="Permalink for Section 3.6.1.2"></a></div>
+            
+            <ul>
+              <li>ICT Accessibility Solicitation Language</li>
+              <li>ICT Accessibility Contract Language</li>
+              <li>Accessibility Specific solicitation forms / templates</li>
+            </ul>
+          </section>
+          <section id="consistent-evaluation"><div class="header-wrapper"><h5 id="x3-6-1-3-consistent-evaluation-process-and-methods"><bdi class="secno">3.6.1.3 </bdi>Consistent Evaluation Process and Methods</h5><a class="self-link" href="#consistent-evaluation" aria-label="Permalink for Section 3.6.1.3"></a></div>
+            
+            <ul>
+              <li>Proof of accessibility evaluations</li>
+              <li>Documented evaluation methodology</li>
+              <li>Submission scoring methodologies</li>
+            </ul>
+          </section>
+          <section id="burden-of-proof-requirements"><div class="header-wrapper"><h5 id="x3-6-1-4-burden-of-proof-accessibility-contract-language-requirements"><bdi class="secno">3.6.1.4 </bdi>“Burden of proof“ accessibility Contract language requirements</h5><a class="self-link" href="#burden-of-proof-requirements" aria-label="Permalink for Section 3.6.1.4"></a></div>
+            
+            <ul>
+              <li>Proof of Vendor testing (automated and manual)</li>
+              <li>Development life cycle accessibility criteria integration and development reviews (for dev services</li>
+              <li>Warranties and remedies section includes accessibility</li>
+              <li>Vendor corrective actions / remediation plans pre and post deployment</li>
+              <li>Executed contract examples with accessibility language.</li>
+            </ul>
+          </section>
+          <section id="procurement-program-management"><div class="header-wrapper"><h5 id="x3-6-1-5-accessibility-in-procurement-program-management"><bdi class="secno">3.6.1.5 </bdi>Accessibility in Procurement Program Management</h5><a class="self-link" href="#procurement-program-management" aria-label="Permalink for Section 3.6.1.5"></a></div>
+            
+            <ul>
+              <li>Accessibility audits</li>
+              <li>Contract lifecycle management</li>
+              <li>Dashboard of procurement related accessibility metrics</li>
+              <li>Issue management process (for complaints)</li>
+            </ul>
+          </section>
+        </section>
+        <section id="procurement-ratings-for-evaluation"><div class="header-wrapper"><h4 id="x3-6-2-ratings-for-evaluation"><bdi class="secno">3.6.2 </bdi>Ratings for Evaluation</h4><a class="self-link" href="#procurement-ratings-for-evaluation" aria-label="Permalink for Section 3.6.2"></a></div>
+          
+          <table>
+            <tbody><tr>
+              <th>Maturity stages</th>
+              <th>Criteria</th>
+            </tr>
+            <tr>
+              <th>Inactive</th>
+              <td>
+                No accessibility criteria, process, or requirements in ICT procurements
+              </td>
+            </tr>
+            <tr>
+              <th>Launch</th>
+              <td>
+                <strong>Definition:</strong> Recognized need for accessibility criteria in procurement process(s).
+                <p><strong>Outcomes:</strong></p> 
+                <p>Work initiated to identify and integrate accessibility into procurement processes and language into all ICT related solicitation documents, vendor responses, and contracts.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>Integrate</th>
+              <td>
+                <strong>Definition:</strong> Accessibility criteria, language, and evaluation methods integrated into most applicable ICT solicitations and contracts.
+                <p><strong>Outcomes:</strong></p> 
+                <p>Solicitation and contract language complete. Responses analyzed by accessibility or trained procurement professionals. Scoring model developed and its use begun. Communications mechanism in place to inform vendors of accessibility requirements.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>Optimize</th>
+              <td>
+                <strong>Definition:</strong> Full and consistent use of accessibility processes and criteria in all procurements with an ICT component in the contract decision making process. 
+                <p><strong>Outcomes:</strong></p>
+                <p>Processes are in place, used consistently, and regularly reviewed /  refined as needed.</p>
+              </td>
+            </tr>            
+          </tbody></table>
+          <p><a href="https://docs.google.com/spreadsheets/d/1fzPlHjHIaSQn9GvpJd86SDpV49U8Beg_iXj6K5aeyGg/edit#gid=1195503796">Procurement Dimension Description / Evaluation Worksheet</a></p>
+        </section>
+      </section>
+      <section id="culture"><div class="header-wrapper"><h3 id="x3-7-culture"><bdi class="secno">3.7 </bdi>Culture</h3><a class="self-link" href="#culture" aria-label="Permalink for Section 3.7"></a></div>
+        
+        <p>Organizational culture consists of shared beliefs and values established by leaders that ultimately shape employee perceptions, behaviors and understanding.</p>
+        <p>To be truly effective and mature, organizations must weave an inclusive and accessible culture into the fabric of the organization. Everyone in the organization should have an understanding and sensitivity to the importance of IT accessibility, how / if it fits within the roles / responsibilities of their positions and work assignments, and an appreciation for the value of a diverse population both within and external to the organization. IT accessibility has  and can have a tremendous impact on people with disabilities that facilitates access to jobs, services, and other aspects of life that others simply take for granted. It is important that the culture of an organization recognize this concept and the unique values that this diversity group brings to an organization. Therefore it is critical that an organization has a diversity culture that includes an understanding of IT Accessibility and how it fits within the various roles within the organization.</p>
+        <section id="culture-proof-points"><div class="header-wrapper"><h4 id="x3-7-1-proof-points"><bdi class="secno">3.7.1 </bdi>Proof Points</h4><a class="self-link" href="#culture-proof-points" aria-label="Permalink for Section 3.7.1"></a></div>
+          
+          <p>Proof Points includes:</p>
+          <ul>
+            <li>Executive sponsor in place for digital accessibility</li>
+            <li>Executive-level digital accessibility program leadership</li>
+            <li>Executive statement of commitment to digital accessibility</li>
+            <li>IT Accessibility Policy in place and implemented</li>
+            <li>Business strategy includes proactive approach to digital accessibility</li>
+            <li>Business strategy includes digital accessibility as market differentiator</li>
+            <li>Digital accessibility for disability inclusion included in core values</li>
+            <li>Digital accessibility included in code of conduct</li>
+            <li>Disability focus in diversity, equity, and inclusion activities</li>
+            <li>Digital accessibility focus in communities of practice</li>
+            <li>Integration of IT accessibility criteria into  employee / officer performance plans as relevant</li>
+            <li>Employee support for digital accessibility and disability inclusion is mandated and monitored</li>
+            <li>Digital accessibility program effectiveness is monitored and improved</li>
+          </ul>
+        </section>
+        <section id="culture-ratings-for-evaluation"><div class="header-wrapper"><h4 id="x3-7-2-ratings-for-evaluation"><bdi class="secno">3.7.2 </bdi>Ratings for Evaluation</h4><a class="self-link" href="#culture-ratings-for-evaluation" aria-label="Permalink for Section 3.7.2"></a></div>
+          
+          <table>
+            <tbody><tr>
+              <th>Maturity stages</th>
+              <th>Criteria</th>
+            </tr>
+            <tr>
+              <th>Inactive</th>
+              <td>
+                No diversity culture or diversity culture does not include disability
+              </td>
+            </tr>
+            <tr>
+              <th>Launch</th>
+              <td>
+                <strong>Definition:</strong> Recognized a need organization-wide cultural programs, planning initiated with limited  or ad hoc activity
+                <p><strong>Outcomes:</strong></p> 
+                <p>Work initiated to identify and integrate ICT accessibility organizational processes and governance, including policies, processes, and practices that impact employees and external audiences; leadership for the initiative; cultural programs formulated, but not yet implemented</p>
+              </td>
+            </tr>
+            <tr>
+              <th>Integrate</th>
+              <td>
+                <strong>Definition:</strong> Cultural programs created and initially deployed
+                <p><strong>Outcomes:</strong></p> 
+                <p>Metrics established, hiring practices implemented; policies now inplace with partial execution, diversity training initiated and but not compete; communities of practice established</p>
+              </td>
+            </tr>
+            <tr>
+              <th>Optimize</th>
+              <td>
+                <strong>Definition:</strong> Strong cultural awareness, appreciation, sensitivity, and support for all aspects of internal / external IT for accessibility and people with disabilities. 
+                <p><strong>Outcomes:</strong></p>
+                <p>Policies, processes, and practices are in place, used consistently, and regularly reviewed / refined as needed. All employees have understanding and sensitivity to the importance of IT accessibility, how / if it fits within their roles / responsibilities, and have an appreciation for the value of a diverse population both within and external to the organization.</p>
+              </td>
+            </tr>            
+          </tbody></table>
+        </section>
+      </section>
+    </section>
+  
+
+
+<section id="Acknowledgements"><div class="header-wrapper"><h2 id="x4-acknowledgements"><bdi class="secno">4. </bdi>Acknowledgements</h2><a class="self-link" href="#Acknowledgements" aria-label="Permalink for Section 4."></a></div>
+	
+<section id="key-contributors-section-editors-and-participants-active-in-the-maturity-model-subgroup-at-the-time-of-publication"><div class="header-wrapper"><h3 id="x4-1-key-contributors-section-editors-and-participants-active-in-the-maturity-model-subgroup-at-the-time-of-publication"><bdi class="secno">4.1 </bdi>Key contributors, section editors and participants active in the Maturity Model Subgroup at the time of publication</h3><a class="self-link" href="#key-contributors-section-editors-and-participants-active-in-the-maturity-model-subgroup-at-the-time-of-publication" aria-label="Permalink for Section 4.1"></a></div>
+ 
+          <ul> 
+                      <li>Jake Abma</li>
+                      <li>Sheri Byrne-Haber (VMWare</li>
+                      <li>Ralp de Rooij (Community Group Member)</li>
+                      <li>David Fazio(Invited Expert)</li>
+                      <li>Jeff Kline (Community Group Member)</li>
+                       <li>Mary Jo Mueller (IBM)</li>
+                      <li>Lori Samuels (NBC Universal)</li>
+          </ul>	   
+</section></section><p role="navigation" id="back-to-top">
+    <a href="#title"><abbr title="Back to Top">↑</abbr></a>
+  </p><script id="respec-dfn-panel">(() => {
+// @ts-check
+if (document.respec) {
+  document.respec.ready.then(setupPanel);
+} else {
+  setupPanel();
+}
+
+function setupPanel() {
+  const listener = panelListener();
+  document.body.addEventListener("keydown", listener);
+  document.body.addEventListener("click", listener);
+}
+
+function panelListener() {
+  /** @type {HTMLElement} */
+  let panel = null;
+  return event => {
+    const { target, type } = event;
+
+    if (!(target instanceof HTMLElement)) return;
+
+    // For keys, we only care about Enter key to activate the panel
+    // otherwise it's activated via a click.
+    if (type === "keydown" && event.key !== "Enter") return;
+
+    const action = deriveAction(event);
+
+    switch (action) {
+      case "show": {
+        hidePanel(panel);
+        /** @type {HTMLElement} */
+        const dfn = target.closest("dfn, .index-term");
+        panel = document.getElementById(`dfn-panel-for-${dfn.id}`);
+        const coords = deriveCoordinates(event);
+        displayPanel(dfn, panel, coords);
+        break;
+      }
+      case "dock": {
+        panel.style.left = null;
+        panel.style.top = null;
+        panel.classList.add("docked");
+        break;
+      }
+      case "hide": {
+        hidePanel(panel);
+        panel = null;
+        break;
+      }
+    }
+  };
+}
+
+/**
+ * @param {MouseEvent|KeyboardEvent} event
+ */
+function deriveCoordinates(event) {
+  const target = /** @type HTMLElement */ (event.target);
+
+  // We prevent synthetic AT clicks from putting
+  // the dialog in a weird place. The AT events sometimes
+  // lack coordinates, so they have clientX/Y = 0
+  const rect = target.getBoundingClientRect();
+  if (
+    event instanceof MouseEvent &&
+    event.clientX >= rect.left &&
+    event.clientY >= rect.top
+  ) {
+    // The event probably happened inside the bounding rect...
+    return { x: event.clientX, y: event.clientY };
+  }
+
+  // Offset to the middle of the element
+  const x = rect.x + rect.width / 2;
+  // Placed at the bottom of the element
+  const y = rect.y + rect.height;
+  return { x, y };
+}
+
+/**
+ * @param {Event} event
+ */
+function deriveAction(event) {
+  const target = /** @type {HTMLElement} */ (event.target);
+  const hitALink = !!target.closest("a");
+  if (target.closest("dfn:not([data-cite]), .index-term")) {
+    return hitALink ? "none" : "show";
+  }
+  if (target.closest(".dfn-panel")) {
+    if (hitALink) {
+      return target.classList.contains("self-link") ? "hide" : "dock";
+    }
+    const panel = target.closest(".dfn-panel");
+    return panel.classList.contains("docked") ? "hide" : "none";
+  }
+  if (document.querySelector(".dfn-panel:not([hidden])")) {
+    return "hide";
+  }
+  return "none";
+}
+
+/**
+ * @param {HTMLElement} dfn
+ * @param {HTMLElement} panel
+ * @param {{ x: number, y: number }} clickPosition
+ */
+function displayPanel(dfn, panel, { x, y }) {
+  panel.hidden = false;
+  // distance (px) between edge of panel and the pointing triangle (caret)
+  const MARGIN = 20;
+
+  const dfnRects = dfn.getClientRects();
+  // Find the `top` offset when the `dfn` can be spread across multiple lines
+  let closestTop = 0;
+  let minDiff = Infinity;
+  for (const rect of dfnRects) {
+    const { top, bottom } = rect;
+    const diffFromClickY = Math.abs((top + bottom) / 2 - y);
+    if (diffFromClickY < minDiff) {
+      minDiff = diffFromClickY;
+      closestTop = top;
+    }
+  }
+
+  const top = window.scrollY + closestTop + dfnRects[0].height;
+  const left = x - MARGIN;
+  panel.style.left = `${left}px`;
+  panel.style.top = `${top}px`;
+
+  // Find if the panel is flowing out of the window
+  const panelRect = panel.getBoundingClientRect();
+  const SCREEN_WIDTH = Math.min(window.innerWidth, window.screen.width);
+  if (panelRect.right > SCREEN_WIDTH) {
+    const newLeft = Math.max(MARGIN, x + MARGIN - panelRect.width);
+    const newCaretOffset = left - newLeft;
+    panel.style.left = `${newLeft}px`;
+    /** @type {HTMLElement} */
+    const caret = panel.querySelector(".caret");
+    caret.style.left = `${newCaretOffset}px`;
+  }
+
+  // As it's a dialog, we trap focus.
+  // TODO: when <dialog> becomes a implemented, we should really
+  // use that.
+  trapFocus(panel, dfn);
+}
+
+/**
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function trapFocus(panel, dfn) {
+  /** @type NodeListOf<HTMLAnchorElement> elements */
+  const anchors = panel.querySelectorAll("a[href]");
+  // No need to trap focus
+  if (!anchors.length) return;
+
+  // Move focus to first anchor element
+  const first = anchors.item(0);
+  first.focus();
+
+  const trapListener = createTrapListener(anchors, panel, dfn);
+  panel.addEventListener("keydown", trapListener);
+
+  // Hiding the panel releases the trap
+  const mo = new MutationObserver(records => {
+    const [record] = records;
+    const target = /** @type HTMLElement */ (record.target);
+    if (target.hidden) {
+      panel.removeEventListener("keydown", trapListener);
+      mo.disconnect();
+    }
+  });
+  mo.observe(panel, { attributes: true, attributeFilter: ["hidden"] });
+}
+
+/**
+ *
+ * @param {NodeListOf<HTMLAnchorElement>} anchors
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function createTrapListener(anchors, panel, dfn) {
+  const lastIndex = anchors.length - 1;
+  let currentIndex = 0;
+  return event => {
+    switch (event.key) {
+      // Hitting "Tab" traps us in a nice loop around elements.
+      case "Tab": {
+        event.preventDefault();
+        currentIndex += event.shiftKey ? -1 : +1;
+        if (currentIndex < 0) {
+          currentIndex = lastIndex;
+        } else if (currentIndex > lastIndex) {
+          currentIndex = 0;
+        }
+        anchors.item(currentIndex).focus();
+        break;
+      }
+
+      // Hitting "Enter" on an anchor releases the trap.
+      case "Enter":
+        hidePanel(panel);
+        break;
+
+      // Hitting "Escape" returns focus to dfn.
+      case "Escape":
+        hidePanel(panel);
+        dfn.focus();
+        return;
+    }
+  };
+}
+
+/** @param {HTMLElement} panel */
+function hidePanel(panel) {
+  if (!panel) return;
+  panel.hidden = true;
+  panel.classList.remove("docked");
+}
+})()</script><script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script></body></html>
