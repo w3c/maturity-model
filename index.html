@@ -10,12 +10,25 @@
     border-collapse: collapse;
   
   }
+  a.internalDFN[title]:hover, .internalDFN[title]:active, a.internalDFN[title]:focus {
+		cursor: help;
+	}
 </style>
     <meta charset="utf-8"/>
     <title>W3C Accessibility Maturity Model</title>
     <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove"></script>
     <script class='remove'>
-      // See https://github.com/w3c/respec/wiki/ for how to configure ReSpec
+		function termTitles() {
+			// put definitions into title attributes of term references
+			document.querySelectorAll('.internalDFN').forEach(function(node){
+				var idref = node.href.substring(node.href.indexOf('#'));
+				var dfn = document.querySelector(idref);
+				if (dfn.parentNode.nodeName == "DT") node.title = dfn.parentNode.nextElementSibling.firstElementChild.textContent.trim().replace(/\s+/g,' ');
+				else if (dfn.title) node.title=dfn.title;
+			});	
+		}
+
+// See https://github.com/w3c/respec/wiki/ for how to configure ReSpec
       var respecConfig = {
         specStatus: "ED",
         shortName: "maturity-model",
@@ -39,8 +52,10 @@
 		  name: "Ruoxi Ran",
 		  company: "W3C",
 		  companyURL: "https://w3c.org/",
-        }]
+        }],
+        postProcess: [termTitles]
       };
+      
     </script>
   </head>
   <body>
@@ -100,21 +115,23 @@
     		<p>The following terms are used in this document:</p>
     		<dl id="terms">
     			<dt><dfn>accommodation</dfn></dt>
-    			<dd>Modifications or adjustments that enable an individual with a disability to gain access and successfully complete tasks.</dd>
+    			<dd><p>Modifications or adjustments that enable an individual with a disability to gain access and successfully complete tasks.</p></dd>
     			<dt><dfn data-lt="ACR">Accessibility Conformance Report</dfn> (ACR)</dt>
-    			<dd>A document that formally summarizes the extent to which an information and communications technology (ICT) product or service conforms to international accessibility guidelines and standards. The report's format is based on the [=Voluntary Product Accessibility Template®=] (VPAT®). ACRs are used by buyers to understand how accessible a product is, and any potential deficiencies.</dd>
+    			<dd><p>A document that formally summarizes the extent to which an information and communications technology (ICT) product or service conforms to international accessibility guidelines and standards.</p>
+    				<p>The report's format is based on the [=Voluntary Product Accessibility Template®=] (VPAT®). ACRs are used by buyers to understand how accessible a product is, and any potential deficiencies.</p></dd>
     			<dt><dfn>contract life cycle</dfn></dt>
-    			<dd>The steps and processes related to the procurement of an ICT product or service beginning with the initialization of the solicitation process, response evaluations, vendor selection for award, implementation of the contract requirements, monitoring over the life of the contract including renewals until the contract reaches its end date.</dd>
+    			<dd><p>The steps and processes related to the procurement of an ICT product or service beginning with the initialization of the solicitation process, response evaluations, vendor selection for award, implementation of the contract requirements, monitoring over the life of the contract including renewals until the contract reaches its end date.</p></dd>
     			<dt><dfn>customer</dfn></dt>
-    			<dd>External or internal users of an organization’s products or services, including but not limited to students, members of the public, employees, and contractors.</dd>
+    			<dd><p>External or internal users of an organization’s products or services, including but not limited to students, members of the public, employees, and contractors.</p></dd>
     			<dt><dfn>dimension</dfn></dt>
-    			<dd>An aspect on which an organization measures its accessibility maturity.</dd>
+    			<dd><p>An aspect on which an organization measures its accessibility maturity.</p></dd>
     			<dt><dfn>Information and Communications Technology</dfn> (ICT)</dt> 
-    			<dd>Information technology and other equipment, systems, technologies, or processes, for which the principal function is the creation, manipulation, storage, display, receipt, or transmission of electronic data and information, as well as any associated content. Examples of ICT include, but are not limited to: computers and peripheral equipment; information kiosks and transaction machines; telecommunications equipment; customer premises equipment; multifunction office machines; software; applications; websites; videos; and electronic documents.</dd> 
+    			<dd><p>Information technology and other equipment, systems, technologies, or processes, for which the principal function is the creation, manipulation, storage, display, receipt, or transmission of electronic data and information, as well as any associated content.</p> 
+    				<p>Examples of ICT include, but are not limited to: computers and peripheral equipment; information kiosks and transaction machines; telecommunications equipment; customer premises equipment; multifunction office machines; software; applications; websites; videos; and electronic documents.</p></dd> 
     			<dt><dfn>maturity stage</dfn></dt>
-    			<dd>Granular stages used to signify the attainment or lack thereof of a specific maturity model [=dimension=].</dd>
+    			<dd><p>Granular stages used to signify the attainment or lack thereof of a specific maturity model [=dimension=].</p></dd>
     			<dt><dfn>organization</dfn></dt>
-    			<dd>Include, but are not limited to:
+    			<dd><p>Include, but are not limited to:</p>
     				<ul>
     					<li>A government agency (Federal, state/province, county/city, municipality, etc.)</li>
     					<li>Any type of business entity (including a sole proprietorship, corporation, or LLC)</li>
@@ -123,9 +140,10 @@
     				</ul>
     			</dd>
     			<dt><dfn>proof point</dfn></dt>
-    			<dd>Written or tangible evidence specific to each [=dimension=] that can be used to measure the maturity for that specific dimension.</dd>
+    			<dd><p>Written or tangible evidence specific to each [=dimension=] that can be used to measure the maturity for that specific dimension.</p></dd>
     			<dt><dfn data-lt="VPAT®">Voluntary Product Accessibility Template®</dfn> (VPAT®)</dt>
-    			<dd>A document template established by the Information Technology Industry (ITI) Council used by vendors to evaluate how well each accessibility requirement is met by a particular product. Vendors use this template to respond to a potential [=customer’s=] [=Accessibility Conformance Report=] (ACR), which details how the product supports each criteria at one of four levels: Section 508, WCAG, EN 301 549 or international. VPATs, based on ACRs, are used by buyers to understand how accessible a product is, and any potential deficiencies.</dd>
+    			<dd><p>A document template established by the Information Technology Industry (ITI) Council used by vendors to evaluate how well each accessibility requirement is met by a particular product.</p> 
+    				<p>Vendors use this template to respond to a potential [=customer’s=] [=Accessibility Conformance Report=] (ACR), which details how the product supports each criteria at one of four levels: Section 508, WCAG, EN 301 549 or international. VPATs, based on ACRs, are used by buyers to understand how accessible a product is, and any potential deficiencies.</p></dd>
     		</dl>
     </section>  
     </section>  
