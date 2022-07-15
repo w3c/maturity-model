@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <style>
@@ -11,7 +11,7 @@
   
   }
 </style>
-    <meta charset="utf-8">
+    <meta charset="utf-8"/>
     <title>W3C Accessibility Maturity Model</title>
     <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove"></script>
     <script class='remove'>
@@ -52,42 +52,9 @@
     </section>
     <section id="introduction">
       <h2>Introduction</h2>
-      <section id="key-terms">
-        <h3>Key terms</h3>
-        <p>The following terms are used in this document:</p>
-        <dl id="terms">
-          <dt><dfn>accommodations</dfn></dt>
-          <dd>Modifications or adjustments that enable an individual with a disability to gain access and successfully complete tasks.</dd>
-          <dt>Accessibility Conformance Report (ACR)</dt>
-          <dd>A document that formally summarizes the extent to which an information and communications technology (ICT) product or service conforms to international accessibility guidelines and standards. The report's format is based on the Voluntary Product Accessibility Template® (VPAT®). ACRs are used by buyers to understand how accessible a product is, and any potential deficiencies.</dd>
-          <dt>contract life cycle</dt>
-          <dd>The steps and processes related to the procurement of an ICT product or service beginning with the initialization of the solicitation process, response evaluations, vendor selection for award, implementation of the contract requirements, monitoring over the life of the contract including renewals until the contract reaches its end date.</dd>
-          <dt>customers</dt>
-          <dd>External or internal users of an organization’s products or services, including but not limited to students, members of the public, employees, and contractors.</dd>
-          <dt>dimension</dt>
-          <dd>An aspect on which an organization measures its accessibility maturity.</dd>
-          <dt>Information and Communications Technology (ICT)</dt> 
-          <dd>Information technology and other equipment, systems, technologies, or processes, for which the principal function is the creation, manipulation, storage, display, receipt, or transmission of electronic data and information, as well as any associated content. Examples of ICT include, but are not limited to: computers and peripheral equipment; information kiosks and transaction machines; telecommunications equipment; customer premises equipment; multifunction office machines; software; applications; websites; videos; and electronic documents.</dd> 
-          <dt>maturity stage</dt>
-          <dd>Granular stages used to signify the attainment or lack thereof of a specific maturity model dimension.</dd>
-          <dt>organizations</dt>
-          <dd>Include, but are not limited to:
-            <ul>
-              <li>A government agency (Federal, state/province, county/city, municipality, etc.)</li>
-              <li>Any type of business entity (including a sole proprietorship, corporation, or LLC)</li>
-              <li>Learning institutions (university, college, district school system)</li>
-              <li>A nongovernmental organization (NGO) or non-profit</li>
-            </ul>
-          </dd>
-          <dt>proof point</dt>
-          <dd>Written or tangible evidence specific to each dimension that can be used to measure the maturity for that specific dimension.</dd>
-          <dt>Voluntary Product Accessibility Template® (VPAT®)</dt>
-          <dd>A document template established by the Information Technology Industry (ITI) Council used by vendors to evaluate how well each accessibility requirement is met by a particular product. Vendors use this template to respond to a potential customer’s Accessibility Conformance Report (ACR), which details how the product supports each criteria at one of four levels: Section 508, WCAG, EN 301 549 or international. VPATs, based on ACRs, are used by buyers to understand how accessible a product is, and any potential deficiencies.</dd>
-        </dl>
-      </section>  
       <section id="About-maturity-model">
         <h3>About the W3C Accessibility Maturity Model</h3>
-        <p>Incorporating considerations for the accessibility of Information and Communications Technology (ICT) Accessibility into an organization’s workflow and quality governance can be a complex process. While some organizations have individuals or departments that support accessibility, many do not recognize the importance of ICT accessibility as a requirement, or the need for accessibility governance systems. This can limit their ability to produce accessible products and services, including training and documentation, which are essential for inclusive digital environments.</p>
+        <p>Incorporating considerations for the accessibility of [=Information and Communications Technology=] (ICT) Accessibility into an [=organization’s=] workflow and quality governance can be a complex process. While some organizations have individuals or departments that support accessibility, many do not recognize the importance of ICT accessibility as a requirement, or the need for accessibility governance systems. This can limit their ability to produce accessible products and services, including training and documentation, which are essential for inclusive digital environments.</p>
         <p>This challenge can be solved by encouraging organizations to establish and implement accessibility governance systems within their organizations. These systems integrate ICT accessibility criteria into policies, key business processes, organizational culture, and management structures in a consistent, repeatable, and measurable fashion. Only then can organizations address the complexities related to enabling ICT accessibility.</p>
         <p>This proposed W3C Accessibility Maturity Model describes an overall framework for establishing a robust ICT accessibility program and identifying areas for improvement. The W3C Accessibility Maturity Model is a tool that:</p>
         <ul>
@@ -97,7 +64,7 @@
         </ul>
         <p>Organizations know when they are doing well (or poorly) with product accessibility using audit reports and bug counts. However, these metrics don’t indicate how the organization is doing operationally to continue to produce accessible products without examining some key corporate processes. The W3C Accessibility ​Maturity Model is a big part of a “shift-left” methodology of preventing problems from recurring, not fixing them after they have happened.</p>
 
-        <p>​Most maturity models contain a number of levels with increasing levels of maturity. Each level contains a definition, controls, a list of processes, and proof points that can be produced for an organization to legitimately claim that they are at a particular level of maturity.</p>
+        <p>​Most maturity models contain a number of levels with increasing levels of maturity. Each level contains a definition, controls, a list of processes, and [=proof points=] that can be produced for an organization to legitimately claim that they are at a particular level of maturity.</p>
 
         <p>Accessibility maturity modeling is very different than accessibility conformance testing</p>
         <ul>
@@ -121,29 +88,62 @@
       </section>
       <section id="existing-research">
         <h3>Existing Research and Standards</h3>
-        <p class="ednote">The W3C maturity model has been developed using research of existing maturity models and standards outside of WCAG. For example,</p> 
+        <p class="ednote">The W3C maturity model has been developed using research of existing maturity models and standards outside of WCAG. For example, </p>
           <ul>
-            <li>ISO/IEC 30071-1:2019 Information Technology - Development Of User Interface Accessibility - Part 1: Code Of Practice For Creating Accessible ICT Products And Services
-            <p>This ISO standard includes specifics to the incorporation of accessibility practices into the design and development process. This is orthogonal to the W3C Accessibility Maturity Model which provides a way to assess organization's accessibility maturity in dimensions beyond the design and development process. Adherence to ISO 30071-1:2019 could be used as a proof point for the maturity of the ICT Development Lifecycle dimension.</p></li>
+            <li>ISO/IEC 30071-1:2019 Information Technology - Development Of User Interface Accessibility - Part 1: Code Of Practice For Creating Accessible ICT Products And Services <p>This ISO standard includes specifics to the incorporation of accessibility practices into the design and development process. This is orthogonal to the W3C Accessibility Maturity Model which provides a way to assess organization's accessibility maturity in dimensions beyond the design and development process. Adherence to ISO 30071-1:2019 could be used as a [=proof point=] for the maturity of the ICT Development Lifecycle dimension.</p></li>
             <li>We intend to add other models the group has researched to this list.</li>
           </ul>
+        
       </section>
+    	<section id="key-terms">
+    		<h3>Key terms</h3>
+    		<p>The following terms are used in this document:</p>
+    		<dl id="terms">
+    			<dt><dfn>accommodation</dfn></dt>
+    			<dd>Modifications or adjustments that enable an individual with a disability to gain access and successfully complete tasks.</dd>
+    			<dt><dfn data-lt="ACR">Accessibility Conformance Report</dfn> (ACR)</dt>
+    			<dd>A document that formally summarizes the extent to which an information and communications technology (ICT) product or service conforms to international accessibility guidelines and standards. The report's format is based on the [=Voluntary Product Accessibility Template®=] (VPAT®). ACRs are used by buyers to understand how accessible a product is, and any potential deficiencies.</dd>
+    			<dt><dfn>contract life cycle</dfn></dt>
+    			<dd>The steps and processes related to the procurement of an ICT product or service beginning with the initialization of the solicitation process, response evaluations, vendor selection for award, implementation of the contract requirements, monitoring over the life of the contract including renewals until the contract reaches its end date.</dd>
+    			<dt><dfn>customer</dfn></dt>
+    			<dd>External or internal users of an organization’s products or services, including but not limited to students, members of the public, employees, and contractors.</dd>
+    			<dt><dfn>dimension</dfn></dt>
+    			<dd>An aspect on which an organization measures its accessibility maturity.</dd>
+    			<dt><dfn>Information and Communications Technology</dfn> (ICT)</dt> 
+    			<dd>Information technology and other equipment, systems, technologies, or processes, for which the principal function is the creation, manipulation, storage, display, receipt, or transmission of electronic data and information, as well as any associated content. Examples of ICT include, but are not limited to: computers and peripheral equipment; information kiosks and transaction machines; telecommunications equipment; customer premises equipment; multifunction office machines; software; applications; websites; videos; and electronic documents.</dd> 
+    			<dt><dfn>maturity stage</dfn></dt>
+    			<dd>Granular stages used to signify the attainment or lack thereof of a specific maturity model [=dimension=].</dd>
+    			<dt><dfn>organization</dfn></dt>
+    			<dd>Include, but are not limited to:
+    				<ul>
+    					<li>A government agency (Federal, state/province, county/city, municipality, etc.)</li>
+    					<li>Any type of business entity (including a sole proprietorship, corporation, or LLC)</li>
+    					<li>Learning institutions (university, college, district school system)</li>
+    					<li>A nongovernmental organization (NGO) or non-profit</li>
+    				</ul>
+    			</dd>
+    			<dt><dfn>proof point</dfn></dt>
+    			<dd>Written or tangible evidence specific to each [=dimension=] that can be used to measure the maturity for that specific dimension.</dd>
+    			<dt><dfn data-lt="VPAT®">Voluntary Product Accessibility Template®</dfn> (VPAT®)</dt>
+    			<dd>A document template established by the Information Technology Industry (ITI) Council used by vendors to evaluate how well each accessibility requirement is met by a particular product. Vendors use this template to respond to a potential [=customer’s=] [=Accessibility Conformance Report=] (ACR), which details how the product supports each criteria at one of four levels: Section 508, WCAG, EN 301 549 or international. VPATs, based on ACRs, are used by buyers to understand how accessible a product is, and any potential deficiencies.</dd>
+    		</dl>
+    </section>  
     </section>  
     <section id="maturity-model-structure">
       <h2>Maturity Model Structure</h2>
-      <p>The W3C Accessibility Maturity Model is organized around seven important aspects, or dimensions, of an organization where accessibility maturity can improve conformance with accessibility standards and regulations.</p> 
+      <p>The W3C Accessibility Maturity Model is organized around seven important aspects, or [=dimensions=], of an [=organization=] where accessibility maturity can improve conformance with accessibility standards and regulations.</p> 
       <p>Dimensions have a unique descriptive name with a high-level, plain-language summary of what the dimension covers. Each dimension has two sub-sections:</p>
       <ul>
-        <li>Proof points, or tangible evidence, that can be used to demonstrate progress. Each proof point includes a high-level description. Deliverables are mostly self-explanatory, but in some cases, additional information is provided.</li>
-        <li>Maturity stages, with definitions and expected outcomes to help organizations assess and report on the level of accessibility maturity attained for the dimension. The maturity stages indicate what is needed to reach full maturity for that dimension.</li>
+        <li>Proof points, or tangible evidence, that can be used to demonstrate progress. Each [=proof point=] includes a high-level description. Deliverables are mostly self-explanatory, but in some cases, additional information is provided.</li>
+        <li>[=Maturity stages=], with definitions and expected outcomes to help [=organizations=] assess and report on the level of accessibility maturity attained for the dimension. The maturity stages indicate what is needed to reach full maturity for that dimension.</li>
       </ul>
       <section id="description-dimensions">
         <h3>Dimensions</h3>
-        <p>The seven dimensions of organizational accessibility maturity are:</p>
+        <p>The seven [=dimensions=] of organizational accessibility maturity are:</p>
         <ul>
-          <li><strong>Communications: </strong>Information as it relates to an organization’s accessibility, as well as accessibility of all internal/external communications.</li>
+          <li><strong>Communications: </strong>Information as it relates to an [=organization’s=] accessibility, as well as accessibility of all internal/external communications.</li>
           <li><strong>Knowledge and Skills: </strong>Ongoing education, and outsourcing practices to fill gaps for accessibility operations.</li>
-          <li><strong>Support: </strong>Accessibility assistance provided to internal employees and external customers with disabilities.</li>
+          <li><strong>Support: </strong>Accessibility assistance provided to internal employees and external [=customers=] with disabilities.</li>
           <li><strong>ICT (Information and Communication Technology) Development Life Cycle: </strong>Incorporation of web, software and hardware accessibility considerations in development processes - from idea conception, to design, development, testing, ACR production, user research, maintenance and obsolescence.</li>
           <li><strong>Personnel: </strong>Job descriptions, recruiting, disability-related employee resource groups necessary to provide lived-experience to accessibility efforts.</li>
           <li><strong>Procurement: </strong>A strategic process that concentrates on finding and acquiring accessible products required by an organization. Activities may include: sourcing, negotiation, and selecting goods and services.</li>
@@ -152,9 +152,9 @@
       </section>
       <section id="description-proof-points">
         <h3>Proof Points</h3>
-        <p>Each dimensional outcome has a range of suggested proof points, which includes any evidence or necessary measures that can be used to determine the maturity of each dimension. Progress towards achieving maturity is attained by creating the proof points described for each dimension.</p>
+        <p>Each dimensional outcome has a range of suggested [=proof points=], which includes any evidence or necessary measures that can be used to determine the maturity of each [=dimension=]. Progress towards achieving maturity is attained by creating the proof points described for each dimension.</p>
         <ul>
-          <li>Proof points are evidence-based, organizational deliverables which indicate the maturity stage.</li>
+          <li>Proof points are evidence-based, organizational deliverables which indicate the [=maturity stage=].</li>
           <li>Proof points are specific to the dimension being focused on.  For example, if only procurement maturity is being measured, only procurement proof points should be evaluated.</li>
           <li>For some dimensions, proof points are further organized by category.</li>
           <li>Proof points can be partially completed at the Launch and Integrate stages, but must be fully completed for the optimize stage.</li>
@@ -163,7 +163,7 @@
         </section>
         <section id="description-maturity-stages">
           <h3>Maturity Stages</h3>
-          <p>Each stage is attained by meeting the defined outcomes for that specific dimension. The completed proof points demonstrate the efforts to achieve the outcomes for a maturity stage.</p>
+          <p>Each stage is attained by meeting the defined outcomes for that specific [=dimension=]. The completed [=proof points=] demonstrate the efforts to achieve the outcomes for a [=maturity stage=].</p>
           <p>All relevant outcomes should be addressed but not all outcomes will apply to all organizations and situations. When an outcome does not apply, it is marked N/A (Not applicable). For example, an accessibility policy does not need to reference native applications if the organization has none.</p>
           <p>Stages are cumulative, so stage advancement is achieved by first meeting the specific criteria of a lower level.</p>
           <p>Note: The terms for the stages were adopted for consistency with the <a href="https://www.nascio.org/resource-center/?selectedTopic=accessibility">Policy Driven Adoption Maturity Model</a>, currently being used by some U.S. government agencies.</p>
@@ -193,8 +193,8 @@
         </section>
       <section id="assessment-template">
         <h3>Assessment Template</h3>
-        <p>Organizational ICT Accessibility Maturity is assessed using the W3C Accessibility Maturity Model assessment template. The template contains worksheet tabs specific to each dimension. The dimension tabs are organized with the dimension definitions and outcomes for each of the four maturity stages and provides a list of the dimension’s proof points.</p>
-        <p>The blank cells below each maturity stage are to be completed by the organization and should contain evidence that the organization has reached that stage. The evidence can include progress on proof point completion, or other relevant information that can be used to claim that the outcomes for that stage have been met.</p>
+        <p>Organizational ICT Accessibility Maturity is assessed using the W3C Accessibility Maturity Model assessment template. The template contains worksheet tabs specific to each [=dimension=]. The dimension tabs are organized with the dimension definitions and outcomes for each of the four [=maturity stages=] and provides a list of the dimension’s [=proof points=].</p>
+        <p>The blank cells below each maturity stage are to be completed by the [=organization=] and should contain evidence that the organization has reached that stage. The evidence can include progress on proof point completion, or other relevant information that can be used to claim that the outcomes for that stage have been met.</p>
         <p>Proof points can span across multiple stages, work being initiated in one stage and completed in a more advanced stage.</p>
         <p>Make a copy of the <a href="https://docs.google.com/spreadsheets/d/1fzPlHjHIaSQn9GvpJd86SDpV49U8Beg_iXj6K5aeyGg/edit#gid=67813499">assessment template worksheet</a> to get started.</p>
       </section>
@@ -203,13 +203,14 @@
       <h2>Accessibility Maturity Per Dimension</h2>
       <section id="Communications">
         <h3>Communications</h3>
-        <p>Communications should be accessible to the widest audience possible and meet the requirements in the accessibility standards. This dimension applies to all electronic communications:</p> 
+        <p>Communications should be accessible to the widest audience possible and meet the requirements in the accessibility standards. This [=dimension=] applies to all electronic communications:</p>
         <ul>
           <li>external and internal</li>
           <li>formal and informal</li>
           <li>major and minor</li>
-          <li>generated by the organization directly or by third parties under contract to the organization</li>
+          <li>generated by the [=organization=] directly or by third parties under contract to the organization</li>
         </ul>
+           
         <p><a href="https://academic.admin.ox.ac.uk/accessible-communication#collapse1801031">Accessible communications</a> is an umbrella term for communications that are clear, direct, easy to understand and that can be rendered in multiple formats so that all users have equivalent access. It takes into consideration the various barriers to accessing information, and removes these or provides alternative formats for the communication. Also, accessibility information about the communications may be communicated so that users are aware of the extent to which they can interact with content.</p>
         <section id="communications-proof-points">
           <h4>Proof Points for Communications Dimension</h4>
@@ -230,7 +231,7 @@
                 <ul>
                   <li>Marketing and sales materials delivered in electronic formats</li>
                   <li>Technical documents or position papers</li>
-                  <li>Product Accessibility Conformance Reports (ACRs)</li>
+                  <li>Product [=Accessibility Conformance Reports=] (ACRs)</li>
                   <li>Other accessibility documentation</li>
                   <li>Presentations</li>
                 </ul>
@@ -244,14 +245,14 @@
               </li>  
               <li>Products and services: accessibility compliance documentation is available and delivered in an accessible format (on the website, by request, or through procurement process)
                 <ul>
-                  <li>Accessibility conformance reports (ACR) based on the Voluntary Product Accessibility Template (VPAT)</li>
+                  <li>Accessibility conformance reports (ACR) based on the [=Voluntary Product Accessibility Template=] (VPAT)</li>
                   <li>Accessibility statement (legal requirement for websites for public sector bodies in the European Union)</li>
                 </ul>
               </li>
               <li>Multimedia, including captions and described audio, if needed</li>
               <li>Social media and blog content</li>
               <li>Customer and vendor training</li>
-              <li>Information on customer support</li>
+              <li>Information on [=customer=] support</li>
               <li>Feedback mechanism for handling questions and accessibility complaints</li>
               <li>Legal documents, payment and billing</li>
             </ul>
@@ -259,7 +260,7 @@
           <section id="communications-training">
             <h5>Accessible Communications Training Program(s)</h5>
             <ul>
-              <li>Accessible Communications Training in place to build and maintain relevant skills in support of this dimension’s proof points</li>
+              <li>Accessible Communications Training in place to build and maintain relevant skills in support of this [=dimension’s=] [=proof points=]</li>
             </ul>
           </section>
         </section>
@@ -316,8 +317,8 @@
       </section>
       <section id="knowledge-and-skills">
         <h3>Knowledge and Skills</h3>
-        <p>Internal and external personnel at all levels of an organization should have accessibility knowledge and skills relevant to their organizational role. Accessibility knowledge and skills relevant to each individual’s position helps employees understand their part in achieving the organization's accessibility goals.</p>
-        <p>While this dimension includes proof points to be implemented at the organization level, knowledge and skills specific to each of the other dimensions should be included within their respective proof points, as appropriate.</p>
+        <p>Internal and external personnel at all levels of an [=organization=] should have accessibility knowledge and skills relevant to their organizational role. Accessibility knowledge and skills relevant to each individual’s position helps employees understand their part in achieving the organization's accessibility goals.</p>
+        <p>While this dimension includes [=proof points=] to be implemented at the organization level, knowledge and skills specific to each of the other dimensions should be included within their respective proof points, as appropriate.</p>
         <section id="knowledge-and-skills-proof-points">
           <h4>Proof Points for Knowledge and Skills Dimension</h4>
           <section id="assess-knowledge-and-skills">
@@ -346,7 +347,7 @@
           <section id="dimension-integration">
             <h5>Dimension Integration</h5>
             <ul>
-              <li>Training and learning programs should be integrated into proof points for each dimension</li>
+              <li>Training and learning programs should be integrated into [=proof points=] for each dimension</li>
             </ul>
           </section>
         </section>
@@ -370,83 +371,76 @@
             <tr>
               <th>Launch</th>
               <td>
-                <strong>Definition:</strong> Recognized need for organization-wide accessibility and disability inclusion, as well as accessibility expertise. Planning initiated, but activities not well organized.
-                <p><strong>Outcomes:</strong></p> 
-                <ul>
-                  <li>Skill areas identified, plans for organization wide surveys to identify gaps initiated, but not implemented.</li>
-                  <li>Mostly Ad hoc training (professional development is not required or monitored.)</li>
-                  <li>Requirements defined for 3rd party learning tools and systems. Work initiated on role based training plans.</li>
-                  <li>Some training courses established.</li>
-                </ul>
-              </td>
+								<strong>Definition:</strong> Recognized need for [=organization=]-wide accessibility and disability inclusion, as well as accessibility expertise. Planning initiated, but activities not well organized. <p><strong>Outcomes:</strong></p>
+								<ul>
+									<li>Skill areas identified, plans for organization wide surveys to identify gaps initiated, but not implemented.</li>
+									<li>Mostly Ad hoc training (professional development is not required or monitored.)</li>
+									<li>Requirements defined for 3rd party learning tools and systems. Work initiated on role based training plans.</li>
+									<li>Some training courses established.</li>
+								</ul>
+							</td>
             </tr>
             <tr>
               <th>Integrate</th>
               <td>
-                <strong>Definition:</strong> Workforce ICT accessibility skills and training roadmap in place with an overall organizational approach to disability inclusion with required role-based accessibility expertise defined. Integration of process to assess and increase accessibility knowledge and skills is in progress, but not consistently implemented across the organization.
-                <p><strong>Outcomes:</strong></p> 
-                <ul>
-                  <li>Workforce skills and training roadmap that includes accessibility objectives for:
-                    <ul>
-                      <li>Knowledge and skills assessments</li>
-                      <li>Available training for their role</li>
-                      <li>Current information on new technologies, platforms, and tools</li>
-                    </ul>
-                  </li>
-                  <li>Training is available to enhance knowledge and skills around ICT accessibility, and disability inclusion</li>
-                  <li>Training metrics are established</li>
-                </ul>
-              </td>
+								<strong>Definition:</strong> Workforce ICT accessibility skills and training roadmap in place with an overall organizational approach to disability inclusion with required role-based accessibility expertise defined. Integration of process to assess and increase accessibility knowledge and skills is in progress, but not consistently implemented across the [=organization=]. <p><strong>Outcomes:</strong></p>
+								<ul>
+									<li>Workforce skills and training roadmap that includes accessibility objectives for: <ul>
+											<li>Knowledge and skills assessments</li>
+											<li>Available training for their role</li>
+											<li>Current information on new technologies, platforms, and tools</li>
+										</ul>
+									</li>
+									<li>Training is available to enhance knowledge and skills around ICT accessibility, and disability inclusion</li>
+									<li>Training metrics are established</li>
+								</ul>
+							</td>
             </tr>
             <tr>
               <th>Optimize</th>
               <td>
-                <strong>Definition:</strong> Full organization ICT accessibility maturity. Organization-wide, role-based expertise in accessibility and disability inclusion is well-defined, evaluated, remediated, and continuously enhanced. Accessibility knowledge and skills are consistently implemented across the organization.
-                <p><strong>Outcomes:</strong></p> 
-                <ul>
-                  <li>Required and preferred knowledge and skills are consistently communicated to all personnel
-                    <ul>
-                      <li>Position descriptions</li>
-                      <li>Hiring announcements</li>
-                      <li>Project management</li>
-                    </ul>
-                  </li>
-                  <li>Workforce is periodically evaluated to ensure knowledge and skills are current with the most up to date standards and accessibility practices.
-                    <ul>
-                      <li>Periodic analysis used to identify gaps in knowledge as well as training materials.</li>
-                    </ul>
-                  </li>
-                  <li>Annual training (conferences, events, online, etc.) is provided to maintain skills current with ICT accessibility requirements and industry best practices. Workforce inclusion training incorporates accessibility for persons with disabilities.  
-                    <ul>
-                      <li>Certification programs are available</li>
-                    </ul>
-                  </li>
-                  <li>Tracking systems in place and consistently used to maintain training inventory, measure skills, and track completion </li>
-                </ul>
-              </td>
+								<strong>Definition:</strong> Full [=organization=] ICT accessibility maturity. Organization-wide, role-based expertise in accessibility and disability inclusion is well-defined, evaluated, remediated, and continuously enhanced. Accessibility knowledge and skills are consistently implemented across the organization. <p><strong>Outcomes:</strong></p>
+								<ul>
+									<li>Required and preferred knowledge and skills are consistently communicated to all personnel <ul>
+											<li>Position descriptions</li>
+											<li>Hiring announcements</li>
+											<li>Project management</li>
+										</ul>
+									</li>
+									<li>Workforce is periodically evaluated to ensure knowledge and skills are current with the most up to date standards and accessibility practices. <ul>
+											<li>Periodic analysis used to identify gaps in knowledge as well as training materials.</li>
+										</ul>
+									</li>
+									<li>Annual training (conferences, events, online, etc.) is provided to maintain skills current with ICT accessibility requirements and industry best practices. Workforce inclusion training incorporates accessibility for persons with disabilities. <ul>
+											<li>Certification programs are available</li>
+										</ul>
+									</li>
+									<li>Tracking systems in place and consistently used to maintain training inventory, measure skills, and track completion </li>
+								</ul>
+							</td>
             </tr>
           </table>
         </section>
       </section>
       <section id="support">
         <h3>Support</h3>
-        <p>Dimension: Support for internal employees and external customers with disabilities. This includes reasonable accommodations for employees and customer support that is specific to users' accessibility needs.</p>
+        <p>Dimension: Support for internal employees and external [=customers=] with disabilities. This includes reasonable [=accommodations=] for employees and customer support that is specific to users' accessibility needs.</p>
         <section id="support-proof-points">
           <h4>Proof Points for Support Dimension</h4>
-            <p>Support proof points may include but are not limited to:</p>
+            <p>Support [=proof points=] may include but are not limited to:</p>
             <ul>
-              <li>Written policy on requesting and providing employee accommodations</li>
+              <li>Written policy on requesting and providing employee [=accommodations=]</li>
               <li>Publicly available (and accessible) web accessibility statement with pointers to support mechanisms</li>
               <li>Support mechanisms are accessible</li>
               <li>Help topics or FAQs specific to accessibility</li>
-              <li>Training for customer support agents (or internal ICT support staff) in accessibility, assistive technology and disability etiquette and awareness</li>
+              <li>Training for [=customer=] support agents (or internal ICT support staff) in accessibility, assistive technology and disability etiquette and awareness</li>
               <li>Existence of a disability-focused employee resource group (ERG) with executive sponsorship</li>
               <li>Validation process in place to manage accessibility feedback</li>
               <li>Accessibility feedback is incorporated to facilitate continuous improvement of identified ICT</li>
             </ul>
           <section id="support-staff-training">
             <h5>Support Staff Training Programs</h5>
-            <p>Staff training programs are in place to build and maintain relevant skills in support of this dimension’s proof points.</p>
+            <p>Staff training programs are in place to build and maintain relevant skills in support of this dimension’s [=proof points=].</p>
           </section>
         </section>
         <section id="support-ratings-for-evaluation">
@@ -459,40 +453,36 @@
             <tr>
               <th>Inactive</th>
               <td>
-                <strong>Definition:</strong> No accessibility effort at all around support for employees or customers.
-              </td>
+								<strong>Definition:</strong> No accessibility effort at all around support for employees or [=customers=]. </td>
             </tr>
             <tr>
               <th>Launch</th>
               <td>
-                <strong>Definition:</strong>  Plans in place to provide basic information about accessibility to customers and to employees.
-                <p><strong>Outcomes:</strong></p> 
-                <ul>
-                  <li>For employees: Written reasonable accommodation policy and process in place to provide accommodations. Employees are made aware of availability of accommodations.
-                  <li>For customers: Pertinent support information available to all customers (could be a policy statement link on site).</li>
-                  <li>No external support for K&S</li>
-                </ul>
-              </td>
+								<strong>Definition:</strong> Plans in place to provide basic information about accessibility to [=customers=] and to employees. <p><strong>Outcomes:</strong></p>
+								<ul>
+									<li>For employees: Written reasonable [=accommodation=] policy and process in place to provide accommodations. Employees are made aware of availability of accommodations. </li>
+									<li>For [=customers=]: Pertinent support information available to all customers (could be a policy statement link on site).</li>
+									<li>No external support for K&amp;S</li>
+								</ul>
+							</td>
             </tr>
             <tr>
               <th>Integrate</th>
               <td>
-                <strong>Definition:</strong> Customers: Dedicated section on Accessibility in the Help section of customer-facing website. FAQ or Help topics include common accessibility questions and answers.
-                <p><strong>Outcomes:</strong></p> 
-                <ul>
-                  <li>Employees: Tools and process in place to facilitate requests for accommodations. Hiring managers have access to disability awareness training.</li>
-                </ul>
-              </td>
+								<strong>Definition:</strong> Customers: Dedicated section on Accessibility in the Help section of [=customer=]-facing website. FAQ or Help topics include common accessibility questions and answers. <p><strong>Outcomes:</strong></p>
+								<ul>
+									<li>Employees: Tools and process in place to facilitate requests for [=accommodations=]. Hiring managers have access to disability awareness training.</li>
+								</ul>
+							</td>
             </tr>
             <tr>
               <th>Optimize</th>
               <td>
-                <strong>Definition:</strong> Customers: Fully trained customer support staff able to support users' accessibility questions. Multiple ways to communicate with technical support are provided that meet the needs of customers with disabilities.
-                <p><strong>Outcomes:</strong></p> 
-                <ul>
-                  <li>Employees/Talent Acquisition: Candidates are offered accommodations for their interviews. Disability Employee Resource Group(s) provide social and professional support to employees with disabilities.</li>
-                </ul>
-              </td>
+								<strong>Definition:</strong> Customers: Fully trained [=customer=] support staff able to support users' accessibility questions. Multiple ways to communicate with technical support are provided that meet the needs of customers with disabilities. <p><strong>Outcomes:</strong></p>
+								<ul>
+									<li>Employees/Talent Acquisition: Candidates are offered [=accommodations=] for their interviews. Disability Employee Resource Group(s) provide social and professional support to employees with disabilities.</li>
+								</ul>
+							</td>
             </tr>
           </table>
         </section>
@@ -502,7 +492,7 @@
         <p>Accessible Information and communication technologies (ICT) serves as a critical enabler that allow persons with disabilities to realize full and effective opportunities to participate, on the basis of equality, in all aspects of society and development that involve technology. Accessibility should be considered throughout the entire ICT development lifecycle: from idea conception, to design, development, testing, production of an ACR based on the VPAT, user research, maintenance, and obsolescence. Training programs must be established and ongoing to have necessary skills for the ICT Development Lifecycle dimension.</p>
         <section id="development-lifecycle-proof-points">
           <h4>Proof Points for ICT Development Lifecycle Dimension</h4>
-          <p>ICT development lifecycle proof points may include but are not limited to:</p>
+          <p>ICT development lifecycle [=proof points=] may include but are not limited to:</p>
           <section id="design">
             <h5>Design</h5>
             <ul>
@@ -523,7 +513,7 @@
               </li>
               <li>Developer's accessibility checklists</li>
               <li>Consistent approach to implementing accessibility features across products</li>
-              <li>Documented way to triage and prioritize fixing accessibility issues and address customer-reported feedback on accessibility</li>
+              <li>Documented way to triage and prioritize fixing accessibility issues and address [=customer=]-reported feedback on accessibility</li>
             </ul>
           </section>
           <section id="user-experience">
@@ -559,7 +549,7 @@
           <section id="ict-development-training">
             <h5>ICT Development Training</h5>
             <ul>
-              <li>ICT Development and Test training in place to build and maintain relevant skills in support of this dimension’s proof points</li>
+              <li>ICT Development and Test training in place to build and maintain relevant skills in support of this dimension’s [=proof points=]</li>
             </ul>
           </section>         
         </section>
@@ -620,7 +610,7 @@
       </section>
       <section id="personnel">
         <h3>Personnel</h3>
-        <p>Introduction: Persons with disabilities should be utilized throughout an organization’s hierarchy (all job types, all authority levels) where their unique insights and lived experiences should better inform decision making. This requires accessible and inclusive hiring practices covering application, interviews, evaluations, onboarding and retention.</p>
+        <p>Introduction: Persons with disabilities should be utilized throughout an [=organization’s=] hierarchy (all job types, all authority levels) where their unique insights and lived experiences should better inform decision making. This requires accessible and inclusive hiring practices covering application, interviews, evaluations, onboarding and retention.</p>
         <section id="personnel-proof-points">
           <h4>Proof Points</h4>
           <section id="targeted-recruiting">
@@ -662,56 +652,52 @@
             <tr>
               <th>Inactive</th>
               <td>
-                <strong>Definition:</strong> No staffing effort towards achieving organization-wide ICT accessibility maturity by including people with disabilities in the workforce. Possibly some informal activities.
-                <p><strong>Outcomes:</strong></p>
-                <ul>
-                  <li> None; No effort at all around recruiting, retaining, or engaging employees with disabilities.</li>
-                </ul>
-              </td>
+								<strong>Definition:</strong> No staffing effort towards achieving [=organization=]-wide ICT accessibility maturity by including people with disabilities in the workforce. Possibly some informal activities. <p><strong>Outcomes:</strong></p>
+								<ul>
+									<li> None; No effort at all around recruiting, retaining, or engaging employees with disabilities.</li>
+								</ul>
+							</td>
             </tr>
             <tr>
               <th>Launch</th>
               <td>
-                <strong>Definition:</strong> Recognized need to include employees with disabilities in the workforce to contribute to organization-wide ICT accessibility maturity. Planning initiated, but recruitment, retention, and engagement, activities around disability inclusion are not well organized.
-                <p><strong>Outcomes:</strong></p> 
-                <ul>
-                  <li>Hiring announcements encourage applications from the disability community.</li>
-                  <li>Disability inclusion is specifically articulated in companies diversity and inclusion policy, and statement.</li>
-                  <li>Champion has been designated to facilitate, and mature disability inclusion. </li>
-                </ul>
-              </td>
+								<strong>Definition:</strong> Recognized need to include employees with disabilities in the workforce to contribute to [=organization=]-wide ICT accessibility maturity. Planning initiated, but recruitment, retention, and engagement, activities around disability inclusion are not well organized. <p><strong>Outcomes:</strong></p>
+								<ul>
+									<li>Hiring announcements encourage applications from the disability community.</li>
+									<li>Disability inclusion is specifically articulated in companies diversity and inclusion policy, and statement.</li>
+									<li>Champion has been designated to facilitate, and mature disability inclusion. </li>
+								</ul>
+							</td>
             </tr>
             <tr>
               <th>Integrate</th>
               <td>
-                <strong>Definition:</strong> Disability inclusion roadmap, to drive ICT accessibility, in place. Overall organizational approach to evaluating recruitment, retention, and engagement is defined. Process integration for maturing disability inclusion efforts for ICT accessibility in progress. Not consistently implemented across the organization.
-                <p><strong>Outcomes:</strong></p> 
-                <ul>
-                  <li>Strategic positions are identified for employees with disabilities to be placed in that will help audit, and drive, the development of accessible products, services.</li>
-                  <li>Targeted recruiting of employees with disabilities</li> 
-                  <li>Accessible recruiting process</li>
-                </ul>
-              </td>
+								<strong>Definition:</strong> Disability inclusion roadmap, to drive ICT accessibility, in place. Overall organizational approach to evaluating recruitment, retention, and engagement is defined. Process integration for maturing disability inclusion efforts for ICT accessibility in progress. Not consistently implemented across the [=organization=]. <p><strong>Outcomes:</strong></p>
+								<ul>
+									<li>Strategic positions are identified for employees with disabilities to be placed in that will help audit, and drive, the development of accessible products, services.</li>
+									<li>Targeted recruiting of employees with disabilities</li>
+									<li>Accessible recruiting process</li>
+								</ul>
+							</td>
             </tr>
             <tr>
               <th>Optimize</th>
               <td>
-                <strong>Definition:</strong> Employees with disabilities are leveraged throughout the organization to achieve full ICT accessibility maturity. Organization-wide, disability inclusion staffing efforts are well-defined, evaluated, remediated, and integrated with ICT accessibility efforts, and goals, across the organization. Employees with disabilities hold key decision making positions, and are spread out across all areas of the organization to drive accessibility in every facet of the business. 
-                <p><strong>Outcomes:</strong></p> 
-                <ul>
-                  <li>Disability Employee Resource Group is leveraged to inform accessibility decision making.</li>
-                  <li>Employees with disabilities leveraged to audit accessibility.</li>
-                  <li>Employees with disabilities leveraged for product development.</li>
-                  <li>Employees with disabilities leveraged for development of accessible services.</li>
-                </ul>
-              </td>
+								<strong>Definition:</strong> Employees with disabilities are leveraged throughout the [=organization=] to achieve full ICT accessibility maturity. Organization-wide, disability inclusion staffing efforts are well-defined, evaluated, remediated, and integrated with ICT accessibility efforts, and goals, across the organization. Employees with disabilities hold key decision making positions, and are spread out across all areas of the organization to drive accessibility in every facet of the business. <p><strong>Outcomes:</strong></p>
+								<ul>
+									<li>Disability Employee Resource Group is leveraged to inform accessibility decision making.</li>
+									<li>Employees with disabilities leveraged to audit accessibility.</li>
+									<li>Employees with disabilities leveraged for product development.</li>
+									<li>Employees with disabilities leveraged for development of accessible services.</li>
+								</ul>
+							</td>
             </tr>            
           </table>
         </section>
       </section>
       <section id="procurement">
         <h3>Procurement</h3>
-        <p>Procurement is a strategic process focused on finding and acquiring cost-effective products needed by an organization. Activities in procurement include sourcing, negotiation, and selection of goods and services.</p>
+        <p>Procurement is a strategic process focused on finding and acquiring cost-effective products needed by an [=organization=]. Activities in procurement include sourcing, negotiation, and selection of goods and services.</p>
         <p>The majority of ICT assets used in an organization are the result of procurement transactions and contracts.When accessibility criteria are integrated into processes and contract language for procuring ICT, an organization can be more capable of providing accessible products, services and workplaces.</p>
         <section id="procurement-proof-points">
           <h4>Proof Points for Procurement Dimension</h4>
@@ -761,7 +747,7 @@
           <section id="procurement-training-programs">
             <h5>Procurement Training Programs</h5>
             <ul>
-              <li>Accessibility related procurement staff training program(s) in place to build and maintain relevant skills in support of this dimension’s proof points</li>
+              <li>Accessibility related procurement staff training program(s) in place to build and maintain relevant skills in support of this dimension’s [=proof points=]</li>
             </ul>
           </section>
         </section>
@@ -808,7 +794,7 @@
       <section id="culture">
         <h3>Culture</h3>
         <p>Organizational culture consists of shared beliefs, values, policies, and processes established by leaders that ultimately shape employee perceptions, behaviors, and understanding.</p>
-        <p>To demonstrate cultural maturity in accessibility, all aspects of the organization’s operation, processes, and skills should include considerations for disability inclusion. Every member of the organization should understand and be sensitive to the importance of ICT accessibility, including their personal role and responsibilities in meeting the organization’s accessibility goals. Accessibility should be an integral part of diversity and inclusion within the organization with clear recognition of the benefits of disability inclusion and the impact of ICT accessibility on people with disabilities to facilitate access to jobs, services, and other aspects of life.</p>
+        <p>To demonstrate cultural maturity in accessibility, all aspects of the [=organization=]’s operation, processes, and skills should include considerations for disability inclusion. Every member of the organization should understand and be sensitive to the importance of ICT accessibility, including their personal role and responsibilities in meeting the organization’s accessibility goals. Accessibility should be an integral part of diversity and inclusion within the organization with clear recognition of the benefits of disability inclusion and the impact of ICT accessibility on people with disabilities to facilitate access to jobs, services, and other aspects of life.</p>
         <section id="culture-proof-points">
           <h4>Proof Points for Culture Dimension</h4>
           <p>May include but not limited to:</p>
@@ -833,7 +819,7 @@
           <section id="cultural-training">
             <h5>General Training Program</h5>
             <ul>
-              <li>Accessibility related training program in place to build and maintain relevant skills in support of this dimension’s proof points</li>
+              <li>Accessibility related training program in place to build and maintain relevant skills in support of this dimension’s [=proof points=]</li>
             </ul>
           </section>
         </section>
@@ -853,15 +839,14 @@
             <tr>
               <th>Launch</th>
               <td>
-                <strong>Definition:</strong> Recognized need for organization-wide cultural programs on accessibility and disability inclusion, planning initiated with limited activity
-                <p><strong>Outcomes:</strong></p> 
-                <p>Work initiated but not yet implemented to:</p> 
-                <ul>
-                  <li>integrate ICT accessibility into organizational processes and governance, including policies and practices that impact employees and external audiences</li> 
-                  <li>identify leadership for the initiative</li>
-                  <li>formulate cultural programs</li>
-                </ul>
-              </td>
+								<strong>Definition:</strong> Recognized need for [=organization=]-wide cultural programs on accessibility and disability inclusion, planning initiated with limited activity <p><strong>Outcomes:</strong></p>
+								<p>Work initiated but not yet implemented to:</p>
+								<ul>
+									<li>integrate ICT accessibility into organizational processes and governance, including policies and practices that impact employees and external audiences</li>
+									<li>identify leadership for the initiative</li>
+									<li>formulate cultural programs</li>
+								</ul>
+							</td>
             </tr>
             <tr>
               <th>Integrate</th>
@@ -879,10 +864,9 @@
             <tr>
               <th>Optimize</th>
               <td>
-                <strong>Definition:</strong> Strong cultural awareness, appreciation, sensitivity, and support for all aspects of ICT accessibility and people with disabilities.
-                <p><strong>Outcomes:</strong></p>
-                <p>Policies, processes, and practices are in place, used consistently, and are regularly reviewed and refined, as needed. All employees have understanding and sensitivity to the importance of ICT accessibility, how it fits within their roles and responsibilities. They also have an appreciation for the value of a diverse population both within and outside of the organization.</p>
-              </td>
+								<strong>Definition:</strong> Strong cultural awareness, appreciation, sensitivity, and support for all aspects of ICT accessibility and people with disabilities. <p><strong>Outcomes:</strong></p>
+								<p>Policies, processes, and practices are in place, used consistently, and are regularly reviewed and refined, as needed. All employees have understanding and sensitivity to the importance of ICT accessibility, how it fits within their roles and responsibilities. They also have an appreciation for the value of a diverse population both within and outside of the [=organization=].</p>
+							</td>
             </tr>            
           </table>
         </section>
