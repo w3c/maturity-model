@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml"><head>
 <meta charset="utf-8">
-<meta name="generator" content="ReSpec 34.1.4">
+<meta name="generator" content="ReSpec 34.1.5">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 .issue-label{text-transform:initial}
@@ -152,15 +152,15 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   "postProcess": [
     null
   ],
-  "publishISODate": "2023-06-28T00:00:00.000Z",
-  "generatedSubtitle": "W3C Editor's Draft 28 June 2023"
+  "publishISODate": "2023-07-19T00:00:00.000Z",
+  "generatedSubtitle": "W3C Editor's Draft 19 July 2023"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED"></head>
   <body class="h-entry informative"><div class="head">
     <p class="logos"><a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
   </a></p>
     <h1 id="title" class="title">W3C Accessibility Maturity Model</h1> 
-    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2023-06-28">28 June 2023</time></p>
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2023-07-19">19 July 2023</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
@@ -269,7 +269,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         
   </p><p>
                   This document is governed by the
-                  <a id="w3c_process_revision" href="https://www.w3.org/2021/Process-20211102/">2 November 2021 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                  <a id="w3c_process_revision" href="https://www.w3.org/2023/Process-20230612/">12 June 2023 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
                 </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#About-maturity-model"><bdi class="secno">1.1 </bdi>About the <abbr title="World Wide Web Consortium">W3C</abbr> Accessibility Maturity Model</a></li><li class="tocline"><a class="tocxref" href="#WCAG-maturity-model-audience"><bdi class="secno">1.2 </bdi>Audience for the <abbr title="World Wide Web Consortium">W3C</abbr> Accessibility Maturity Model</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#scope"><bdi class="secno">1.2.1 </bdi>Scope</a></li></ol></li><li class="tocline"><a class="tocxref" href="#existing-research"><bdi class="secno">1.3 </bdi>Existing Research and Standards</a></li><li class="tocline"><a class="tocxref" href="#key-terms"><bdi class="secno">1.4 </bdi>Key terms</a></li></ol></li><li class="tocline"><a class="tocxref" href="#maturity-model-structure"><bdi class="secno">2. </bdi>Maturity Model Structure</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#description-dimensions"><bdi class="secno">2.1 </bdi>Dimensions</a></li><li class="tocline"><a class="tocxref" href="#description-proof-points"><bdi class="secno">2.2 </bdi>Proof Points</a></li><li class="tocline"><a class="tocxref" href="#description-maturity-stages"><bdi class="secno">2.3 </bdi>Maturity Stages</a></li><li class="tocline"><a class="tocxref" href="#assessment-template"><bdi class="secno">2.4 </bdi>Assessment Template</a></li></ol></li><li class="tocline"><a class="tocxref" href="#Accessibility-maturity-per-dimension"><bdi class="secno">3. </bdi>Accessibility Maturity Per Dimension</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#Communications"><bdi class="secno">3.1 </bdi>Communications</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#communications-proof-points"><bdi class="secno">3.1.1 </bdi>Proof Points</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#preconditions-for-accessible-communication"><bdi class="secno">3.1.1.1 </bdi>Preconditions for accessible communication</a></li><li class="tocline"><a class="tocxref" href="#direct-communications"><bdi class="secno">3.1.1.2 </bdi>Accessible Direct Communications</a></li><li class="tocline"><a class="tocxref" href="#communications-training"><bdi class="secno">3.1.1.3 </bdi>Accessible Communications Training</a></li></ol></li><li class="tocline"><a class="tocxref" href="#communications-ratings-for-evaluation"><bdi class="secno">3.1.2 </bdi>Ratings for Evaluation</a></li></ol></li><li class="tocline"><a class="tocxref" href="#knowledge-and-skills"><bdi class="secno">3.2 </bdi>Knowledge and Skills</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#knowledge-and-skills-proof-points"><bdi class="secno">3.2.1 </bdi>Proof Points</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#assess-knowledge-and-skills"><bdi class="secno">3.2.1.1 </bdi>Assessing Current Skills to Identify and Address Gaps</a></li><li class="tocline"><a class="tocxref" href="#building-organizational-capacity"><bdi class="secno">3.2.1.2 </bdi>Building and Maintaining Organizational Capacity</a></li><li class="tocline"><a class="tocxref" href="#dimension-integration"><bdi class="secno">3.2.1.3 </bdi>Dimension Integration</a></li></ol></li><li class="tocline"><a class="tocxref" href="#knowledge-ratings-for-evaluation"><bdi class="secno">3.2.2 </bdi>Ratings for Evaluation</a></li></ol></li><li class="tocline"><a class="tocxref" href="#support"><bdi class="secno">3.3 </bdi>Support</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#support-proof-points"><bdi class="secno">3.3.1 </bdi>Proof Points</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#support-staff-training"><bdi class="secno">3.3.1.1 </bdi>Support Staff Training</a></li></ol></li><li class="tocline"><a class="tocxref" href="#support-ratings-for-evaluation"><bdi class="secno">3.3.2 </bdi>Ratings for Evaluation</a></li></ol></li><li class="tocline"><a class="tocxref" href="#ict-development-lifecycle"><bdi class="secno">3.4 </bdi>ICT Development Lifecycle</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#development-lifecycle-proof-points"><bdi class="secno">3.4.1 </bdi>Proof Points for ICT Development Lifecycle Dimension</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#design"><bdi class="secno">3.4.1.1 </bdi>Design</a></li><li class="tocline"><a class="tocxref" href="#development"><bdi class="secno">3.4.1.2 </bdi>Development</a></li><li class="tocline"><a class="tocxref" href="#user-experience"><bdi class="secno">3.4.1.3 </bdi>User Experience</a></li><li class="tocline"><a class="tocxref" href="#quality-review-release"><bdi class="secno">3.4.1.4 </bdi>Quality Review Through Release</a></li><li class="tocline"><a class="tocxref" href="#ict-development-training"><bdi class="secno">3.4.1.5 </bdi>ICT Development Training</a></li></ol></li><li class="tocline"><a class="tocxref" href="#development-lifecycle-ratings-for-evaluation"><bdi class="secno">3.4.2 </bdi>Ratings for Evaluation</a></li></ol></li><li class="tocline"><a class="tocxref" href="#personnel"><bdi class="secno">3.5 </bdi>Personnel</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#personnel-proof-points"><bdi class="secno">3.5.1 </bdi>Proof Points</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#targeted-recruiting"><bdi class="secno">3.5.1.1 </bdi>Targeted Recruiting</a></li><li class="tocline"><a class="tocxref" href="#accessible-job-application-platform"><bdi class="secno">3.5.1.2 </bdi>Accessible Job Application Platform</a></li><li class="tocline"><a class="tocxref" href="#strategic-engagement"><bdi class="secno">3.5.1.3 </bdi>Strategic Engagement</a></li></ol></li><li class="tocline"><a class="tocxref" href="#personnel-ratings-for-evaluation"><bdi class="secno">3.5.2 </bdi>Ratings for Evaluation</a></li></ol></li><li class="tocline"><a class="tocxref" href="#procurement"><bdi class="secno">3.6 </bdi>Procurement</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#procurement-proof-points"><bdi class="secno">3.6.1 </bdi>Proof Points</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#policy-documentation"><bdi class="secno">3.6.1.1 </bdi>Policy Documentation</a></li><li class="tocline"><a class="tocxref" href="#consistent-contract-language"><bdi class="secno">3.6.1.2 </bdi>Consistent Use of Standardized Procurement Language</a></li><li class="tocline"><a class="tocxref" href="#consistent-evaluation"><bdi class="secno">3.6.1.3 </bdi>Consistent Evaluation Process and Methods</a></li><li class="tocline"><a class="tocxref" href="#accessibility-contract-language"><bdi class="secno">3.6.1.4 </bdi>Accessibility Contract Language</a></li><li class="tocline"><a class="tocxref" href="#procurement-program-management"><bdi class="secno">3.6.1.5 </bdi>Accessibility in Procurement Program Management</a></li><li class="tocline"><a class="tocxref" href="#procurement-training"><bdi class="secno">3.6.1.6 </bdi>Procurement Training</a></li></ol></li><li class="tocline"><a class="tocxref" href="#procurement-ratings-for-evaluation"><bdi class="secno">3.6.2 </bdi>Ratings for Evaluation</a></li></ol></li><li class="tocline"><a class="tocxref" href="#culture"><bdi class="secno">3.7 </bdi>Culture</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#culture-proof-points"><bdi class="secno">3.7.1 </bdi>Proof Points</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#organizational-culture-of-inclusion"><bdi class="secno">3.7.1.1 </bdi>Organizational Culture of Disability Inclusion</a></li><li class="tocline"><a class="tocxref" href="#cultural-training"><bdi class="secno">3.7.1.2 </bdi>General Training</a></li></ol></li><li class="tocline"><a class="tocxref" href="#culture-ratings-for-evaluation"><bdi class="secno">3.7.2 </bdi>Ratings for Evaluation</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#Acknowledgements"><bdi class="secno">4. </bdi>Acknowledgements</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#key-contributors-section-editors-and-participants-active-in-the-maturity-model-subgroup-at-the-time-of-publication"><bdi class="secno">4.1 </bdi>Key contributors, section editors and participants active in the Maturity Model Subgroup at the time of publication</a></li></ol></li></ol></nav>
     <section id="introduction"><div class="header-wrapper"><h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction</h2><a class="self-link" href="#introduction" aria-label="Permalink for Section 1."></a></div>
       
@@ -561,7 +561,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
           <section id="building-organizational-capacity"><div class="header-wrapper"><h5 id="x3-2-1-2-building-and-maintaining-organizational-capacity"><bdi class="secno">3.2.1.2 </bdi>Building and Maintaining Organizational Capacity</h5><a class="self-link" href="#building-organizational-capacity" aria-label="Permalink for Section 3.2.1.2"></a></div>
             
             <ul>
-              <li>Implementation of role based training plans and curriculums</li>
+              <li>Implementation of role based training plans and curricula</li>
               <li>Procured external training resources, as needed</li>
               <li>Incorporation of digital accessibility training curricula into organization learning management, tracking, and auditing systems</li>
               <li>Accessibility training when onboarding all new employees</li>
@@ -1131,12 +1131,12 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-accommodation-1" title="§ 3.3 Support">§ 3.3 Support</a> 
-  </li><li>
-    <a href="#ref-for-dfn-accommodation-2" title="§ 3.3.1 Proof Points">§ 3.3.1 Proof Points</a> 
-  </li><li>
-    <a href="#ref-for-dfn-accommodation-3" title="§ 3.3.2 Ratings for Evaluation">§ 3.3.2 Ratings for Evaluation</a> <a href="#ref-for-dfn-accommodation-4" title="Reference 2">(2)</a> <a href="#ref-for-dfn-accommodation-5" title="Reference 3">(3)</a> 
-  </li>
+      <a href="#ref-for-dfn-accommodation-1" title="§ 3.3 Support">§ 3.3 Support</a> 
+    </li><li>
+      <a href="#ref-for-dfn-accommodation-2" title="§ 3.3.1 Proof Points">§ 3.3.1 Proof Points</a> 
+    </li><li>
+      <a href="#ref-for-dfn-accommodation-3" title="§ 3.3.2 Ratings for Evaluation">§ 3.3.2 Ratings for Evaluation</a> <a href="#ref-for-dfn-accommodation-4" title="Reference 2">(2)</a> <a href="#ref-for-dfn-accommodation-5" title="Reference 3">(3)</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-acr" aria-label="Links in this document to definition: Accessibility Conformance Report">
       <span class="caret"></span>
@@ -1147,10 +1147,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-acr-1" title="§ 1.4 Key terms">§ 1.4 Key terms</a> 
-  </li><li>
-    <a href="#ref-for-dfn-acr-2" title="§ 3.1.1.2 Accessible Direct Communications">§ 3.1.1.2 Accessible Direct Communications</a> 
-  </li>
+      <a href="#ref-for-dfn-acr-1" title="§ 1.4 Key terms">§ 1.4 Key terms</a> 
+    </li><li>
+      <a href="#ref-for-dfn-acr-2" title="§ 3.1.1.2 Accessible Direct Communications">§ 3.1.1.2 Accessible Direct Communications</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-contract-lifecycle" aria-label="Links in this document to definition: contract lifecycle">
       <span class="caret"></span>
@@ -1161,8 +1161,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-contract-lifecycle-1" title="§ 3.6.1.5 Accessibility in Procurement Program Management">§ 3.6.1.5 Accessibility in Procurement Program Management</a> 
-  </li>
+      <a href="#ref-for-dfn-contract-lifecycle-1" title="§ 3.6.1.5 Accessibility in Procurement Program Management">§ 3.6.1.5 Accessibility in Procurement Program Management</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-customer" aria-label="Links in this document to definition: customer">
       <span class="caret"></span>
@@ -1173,20 +1173,20 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-customer-1" title="§ 1.4 Key terms">§ 1.4 Key terms</a> 
-  </li><li>
-    <a href="#ref-for-dfn-customer-2" title="§ 2.1 Dimensions">§ 2.1 Dimensions</a> 
-  </li><li>
-    <a href="#ref-for-dfn-customer-3" title="§ 3.1.1.2 Accessible Direct Communications">§ 3.1.1.2 Accessible Direct Communications</a> 
-  </li><li>
-    <a href="#ref-for-dfn-customer-4" title="§ 3.3 Support">§ 3.3 Support</a> 
-  </li><li>
-    <a href="#ref-for-dfn-customer-5" title="§ 3.3.1 Proof Points">§ 3.3.1 Proof Points</a> 
-  </li><li>
-    <a href="#ref-for-dfn-customer-6" title="§ 3.3.2 Ratings for Evaluation">§ 3.3.2 Ratings for Evaluation</a> <a href="#ref-for-dfn-customer-7" title="Reference 2">(2)</a> <a href="#ref-for-dfn-customer-8" title="Reference 3">(3)</a> <a href="#ref-for-dfn-customer-9" title="Reference 4">(4)</a> <a href="#ref-for-dfn-customer-10" title="Reference 5">(5)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-customer-11" title="§ 3.4.1.2 Development">§ 3.4.1.2 Development</a> 
-  </li>
+      <a href="#ref-for-dfn-customer-1" title="§ 1.4 Key terms">§ 1.4 Key terms</a> 
+    </li><li>
+      <a href="#ref-for-dfn-customer-2" title="§ 2.1 Dimensions">§ 2.1 Dimensions</a> 
+    </li><li>
+      <a href="#ref-for-dfn-customer-3" title="§ 3.1.1.2 Accessible Direct Communications">§ 3.1.1.2 Accessible Direct Communications</a> 
+    </li><li>
+      <a href="#ref-for-dfn-customer-4" title="§ 3.3 Support">§ 3.3 Support</a> 
+    </li><li>
+      <a href="#ref-for-dfn-customer-5" title="§ 3.3.1 Proof Points">§ 3.3.1 Proof Points</a> 
+    </li><li>
+      <a href="#ref-for-dfn-customer-6" title="§ 3.3.2 Ratings for Evaluation">§ 3.3.2 Ratings for Evaluation</a> <a href="#ref-for-dfn-customer-7" title="Reference 2">(2)</a> <a href="#ref-for-dfn-customer-8" title="Reference 3">(3)</a> <a href="#ref-for-dfn-customer-9" title="Reference 4">(4)</a> <a href="#ref-for-dfn-customer-10" title="Reference 5">(5)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-customer-11" title="§ 3.4.1.2 Development">§ 3.4.1.2 Development</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-dimension" aria-label="Links in this document to definition: dimension">
       <span class="caret"></span>
@@ -1197,24 +1197,24 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-dimension-1" title="§ 1.4 Key terms">§ 1.4 Key terms</a> <a href="#ref-for-dfn-dimension-2" title="Reference 2">(2)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-dimension-3" title="§ 2. Maturity Model Structure">§ 2. Maturity Model Structure</a> 
-  </li><li>
-    <a href="#ref-for-dfn-dimension-4" title="§ 2.1 Dimensions">§ 2.1 Dimensions</a> 
-  </li><li>
-    <a href="#ref-for-dfn-dimension-5" title="§ 2.2 Proof Points">§ 2.2 Proof Points</a> 
-  </li><li>
-    <a href="#ref-for-dfn-dimension-6" title="§ 2.3 Maturity Stages">§ 2.3 Maturity Stages</a> 
-  </li><li>
-    <a href="#ref-for-dfn-dimension-7" title="§ 2.4 Assessment Template">§ 2.4 Assessment Template</a> 
-  </li><li>
-    <a href="#ref-for-dfn-dimension-8" title="§ 3.1 Communications">§ 3.1 Communications</a> 
-  </li><li>
-    <a href="#ref-for-dfn-dimension-9" title="§ 3.1.1.3 Accessible Communications Training">§ 3.1.1.3 Accessible Communications Training</a> 
-  </li><li>
-    <a href="#ref-for-dfn-dimension-10" title="§ 3.3 Support">§ 3.3 Support</a> 
-  </li>
+      <a href="#ref-for-dfn-dimension-1" title="§ 1.4 Key terms">§ 1.4 Key terms</a> <a href="#ref-for-dfn-dimension-2" title="Reference 2">(2)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-dimension-3" title="§ 2. Maturity Model Structure">§ 2. Maturity Model Structure</a> 
+    </li><li>
+      <a href="#ref-for-dfn-dimension-4" title="§ 2.1 Dimensions">§ 2.1 Dimensions</a> 
+    </li><li>
+      <a href="#ref-for-dfn-dimension-5" title="§ 2.2 Proof Points">§ 2.2 Proof Points</a> 
+    </li><li>
+      <a href="#ref-for-dfn-dimension-6" title="§ 2.3 Maturity Stages">§ 2.3 Maturity Stages</a> 
+    </li><li>
+      <a href="#ref-for-dfn-dimension-7" title="§ 2.4 Assessment Template">§ 2.4 Assessment Template</a> 
+    </li><li>
+      <a href="#ref-for-dfn-dimension-8" title="§ 3.1 Communications">§ 3.1 Communications</a> 
+    </li><li>
+      <a href="#ref-for-dfn-dimension-9" title="§ 3.1.1.3 Accessible Communications Training">§ 3.1.1.3 Accessible Communications Training</a> 
+    </li><li>
+      <a href="#ref-for-dfn-dimension-10" title="§ 3.3 Support">§ 3.3 Support</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-information-and-communications-technology" aria-label="Links in this document to definition: Information and Communications Technology">
       <span class="caret"></span>
@@ -1225,8 +1225,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-information-and-communications-technology-1" title="§ 1.1 About the W3C Accessibility Maturity Model">§ 1.1 About the W3C Accessibility Maturity Model</a> 
-  </li>
+      <a href="#ref-for-dfn-information-and-communications-technology-1" title="§ 1.1 About the W3C Accessibility Maturity Model">§ 1.1 About the W3C Accessibility Maturity Model</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-maturity-stage" aria-label="Links in this document to definition: maturity stage">
       <span class="caret"></span>
@@ -1237,14 +1237,14 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-maturity-stage-1" title="§ 2. Maturity Model Structure">§ 2. Maturity Model Structure</a> 
-  </li><li>
-    <a href="#ref-for-dfn-maturity-stage-2" title="§ 2.2 Proof Points">§ 2.2 Proof Points</a> 
-  </li><li>
-    <a href="#ref-for-dfn-maturity-stage-3" title="§ 2.3 Maturity Stages">§ 2.3 Maturity Stages</a> 
-  </li><li>
-    <a href="#ref-for-dfn-maturity-stage-4" title="§ 2.4 Assessment Template">§ 2.4 Assessment Template</a> 
-  </li>
+      <a href="#ref-for-dfn-maturity-stage-1" title="§ 2. Maturity Model Structure">§ 2. Maturity Model Structure</a> 
+    </li><li>
+      <a href="#ref-for-dfn-maturity-stage-2" title="§ 2.2 Proof Points">§ 2.2 Proof Points</a> 
+    </li><li>
+      <a href="#ref-for-dfn-maturity-stage-3" title="§ 2.3 Maturity Stages">§ 2.3 Maturity Stages</a> 
+    </li><li>
+      <a href="#ref-for-dfn-maturity-stage-4" title="§ 2.4 Assessment Template">§ 2.4 Assessment Template</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-organization" aria-label="Links in this document to definition: organization">
       <span class="caret"></span>
@@ -1255,30 +1255,30 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-organization-1" title="§ 1.1 About the W3C Accessibility Maturity Model">§ 1.1 About the W3C Accessibility Maturity Model</a> 
-  </li><li>
-    <a href="#ref-for-dfn-organization-2" title="§ 2. Maturity Model Structure">§ 2. Maturity Model Structure</a> <a href="#ref-for-dfn-organization-3" title="Reference 2">(2)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-organization-4" title="§ 2.1 Dimensions">§ 2.1 Dimensions</a> 
-  </li><li>
-    <a href="#ref-for-dfn-organization-5" title="§ 2.4 Assessment Template">§ 2.4 Assessment Template</a> 
-  </li><li>
-    <a href="#ref-for-dfn-organization-6" title="§ 3.1 Communications">§ 3.1 Communications</a> 
-  </li><li>
-    <a href="#ref-for-dfn-organization-7" title="§ 3.2 Knowledge and Skills">§ 3.2 Knowledge and Skills</a> 
-  </li><li>
-    <a href="#ref-for-dfn-organization-8" title="§ 3.2.2 Ratings for Evaluation">§ 3.2.2 Ratings for Evaluation</a> <a href="#ref-for-dfn-organization-9" title="Reference 2">(2)</a> <a href="#ref-for-dfn-organization-10" title="Reference 3">(3)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-organization-11" title="§ 3.5 Personnel">§ 3.5 Personnel</a> 
-  </li><li>
-    <a href="#ref-for-dfn-organization-12" title="§ 3.5.2 Ratings for Evaluation">§ 3.5.2 Ratings for Evaluation</a> <a href="#ref-for-dfn-organization-13" title="Reference 2">(2)</a> <a href="#ref-for-dfn-organization-14" title="Reference 3">(3)</a> <a href="#ref-for-dfn-organization-15" title="Reference 4">(4)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-organization-16" title="§ 3.6 Procurement">§ 3.6 Procurement</a> 
-  </li><li>
-    <a href="#ref-for-dfn-organization-17" title="§ 3.7 Culture">§ 3.7 Culture</a> 
-  </li><li>
-    <a href="#ref-for-dfn-organization-18" title="§ 3.7.2 Ratings for Evaluation">§ 3.7.2 Ratings for Evaluation</a> <a href="#ref-for-dfn-organization-19" title="Reference 2">(2)</a> 
-  </li>
+      <a href="#ref-for-dfn-organization-1" title="§ 1.1 About the W3C Accessibility Maturity Model">§ 1.1 About the W3C Accessibility Maturity Model</a> 
+    </li><li>
+      <a href="#ref-for-dfn-organization-2" title="§ 2. Maturity Model Structure">§ 2. Maturity Model Structure</a> <a href="#ref-for-dfn-organization-3" title="Reference 2">(2)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-organization-4" title="§ 2.1 Dimensions">§ 2.1 Dimensions</a> 
+    </li><li>
+      <a href="#ref-for-dfn-organization-5" title="§ 2.4 Assessment Template">§ 2.4 Assessment Template</a> 
+    </li><li>
+      <a href="#ref-for-dfn-organization-6" title="§ 3.1 Communications">§ 3.1 Communications</a> 
+    </li><li>
+      <a href="#ref-for-dfn-organization-7" title="§ 3.2 Knowledge and Skills">§ 3.2 Knowledge and Skills</a> 
+    </li><li>
+      <a href="#ref-for-dfn-organization-8" title="§ 3.2.2 Ratings for Evaluation">§ 3.2.2 Ratings for Evaluation</a> <a href="#ref-for-dfn-organization-9" title="Reference 2">(2)</a> <a href="#ref-for-dfn-organization-10" title="Reference 3">(3)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-organization-11" title="§ 3.5 Personnel">§ 3.5 Personnel</a> 
+    </li><li>
+      <a href="#ref-for-dfn-organization-12" title="§ 3.5.2 Ratings for Evaluation">§ 3.5.2 Ratings for Evaluation</a> <a href="#ref-for-dfn-organization-13" title="Reference 2">(2)</a> <a href="#ref-for-dfn-organization-14" title="Reference 3">(3)</a> <a href="#ref-for-dfn-organization-15" title="Reference 4">(4)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-organization-16" title="§ 3.6 Procurement">§ 3.6 Procurement</a> 
+    </li><li>
+      <a href="#ref-for-dfn-organization-17" title="§ 3.7 Culture">§ 3.7 Culture</a> 
+    </li><li>
+      <a href="#ref-for-dfn-organization-18" title="§ 3.7.2 Ratings for Evaluation">§ 3.7.2 Ratings for Evaluation</a> <a href="#ref-for-dfn-organization-19" title="Reference 2">(2)</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-proof-point" aria-label="Links in this document to definition: proof point">
       <span class="caret"></span>
@@ -1289,42 +1289,42 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-proof-point-1" title="§ 1.1 About the W3C Accessibility Maturity Model">§ 1.1 About the W3C Accessibility Maturity Model</a> 
-  </li><li>
-    <a href="#ref-for-dfn-proof-point-2" title="§ 1.3 Existing Research and Standards">§ 1.3 Existing Research and Standards</a> 
-  </li><li>
-    <a href="#ref-for-dfn-proof-point-3" title="§ 2. Maturity Model Structure">§ 2. Maturity Model Structure</a> 
-  </li><li>
-    <a href="#ref-for-dfn-proof-point-4" title="§ 2.2 Proof Points">§ 2.2 Proof Points</a> 
-  </li><li>
-    <a href="#ref-for-dfn-proof-point-5" title="§ 2.3 Maturity Stages">§ 2.3 Maturity Stages</a> 
-  </li><li>
-    <a href="#ref-for-dfn-proof-point-6" title="§ 2.4 Assessment Template">§ 2.4 Assessment Template</a> <a href="#ref-for-dfn-proof-point-7" title="Reference 2">(2)</a> 
-  </li><li>
-    <a href="#ref-for-dfn-proof-point-8" title="§ 3.1.1 Proof Points">§ 3.1.1 Proof Points</a> 
-  </li><li>
-    <a href="#ref-for-dfn-proof-point-9" title="§ 3.1.1.3 Accessible Communications Training">§ 3.1.1.3 Accessible Communications Training</a> 
-  </li><li>
-    <a href="#ref-for-dfn-proof-point-10" title="§ 3.2 Knowledge and Skills">§ 3.2 Knowledge and Skills</a> 
-  </li><li>
-    <a href="#ref-for-dfn-proof-point-11" title="§ 3.2.1.3 Dimension Integration">§ 3.2.1.3 Dimension Integration</a> 
-  </li><li>
-    <a href="#ref-for-dfn-proof-point-12" title="§ 3.3.1 Proof Points">§ 3.3.1 Proof Points</a> 
-  </li><li>
-    <a href="#ref-for-dfn-proof-point-13" title="§ 3.3.1.1 Support Staff Training">§ 3.3.1.1 Support Staff Training</a> 
-  </li><li>
-    <a href="#ref-for-dfn-proof-point-14" title="§ 3.4.1 Proof Points for ICT Development Lifecycle Dimension">§ 3.4.1 Proof Points for ICT Development Lifecycle Dimension</a> 
-  </li><li>
-    <a href="#ref-for-dfn-proof-point-15" title="§ 3.4.1.5 ICT Development Training">§ 3.4.1.5 ICT Development Training</a> 
-  </li><li>
-    <a href="#ref-for-dfn-proof-point-16" title="§ 3.6.1 Proof Points">§ 3.6.1 Proof Points</a> 
-  </li><li>
-    <a href="#ref-for-dfn-proof-point-17" title="§ 3.6.1.6 Procurement Training">§ 3.6.1.6 Procurement Training</a> 
-  </li><li>
-    <a href="#ref-for-dfn-proof-point-18" title="§ 3.7.1 Proof Points">§ 3.7.1 Proof Points</a> 
-  </li><li>
-    <a href="#ref-for-dfn-proof-point-19" title="§ 3.7.1.2 General Training">§ 3.7.1.2 General Training</a> 
-  </li>
+      <a href="#ref-for-dfn-proof-point-1" title="§ 1.1 About the W3C Accessibility Maturity Model">§ 1.1 About the W3C Accessibility Maturity Model</a> 
+    </li><li>
+      <a href="#ref-for-dfn-proof-point-2" title="§ 1.3 Existing Research and Standards">§ 1.3 Existing Research and Standards</a> 
+    </li><li>
+      <a href="#ref-for-dfn-proof-point-3" title="§ 2. Maturity Model Structure">§ 2. Maturity Model Structure</a> 
+    </li><li>
+      <a href="#ref-for-dfn-proof-point-4" title="§ 2.2 Proof Points">§ 2.2 Proof Points</a> 
+    </li><li>
+      <a href="#ref-for-dfn-proof-point-5" title="§ 2.3 Maturity Stages">§ 2.3 Maturity Stages</a> 
+    </li><li>
+      <a href="#ref-for-dfn-proof-point-6" title="§ 2.4 Assessment Template">§ 2.4 Assessment Template</a> <a href="#ref-for-dfn-proof-point-7" title="Reference 2">(2)</a> 
+    </li><li>
+      <a href="#ref-for-dfn-proof-point-8" title="§ 3.1.1 Proof Points">§ 3.1.1 Proof Points</a> 
+    </li><li>
+      <a href="#ref-for-dfn-proof-point-9" title="§ 3.1.1.3 Accessible Communications Training">§ 3.1.1.3 Accessible Communications Training</a> 
+    </li><li>
+      <a href="#ref-for-dfn-proof-point-10" title="§ 3.2 Knowledge and Skills">§ 3.2 Knowledge and Skills</a> 
+    </li><li>
+      <a href="#ref-for-dfn-proof-point-11" title="§ 3.2.1.3 Dimension Integration">§ 3.2.1.3 Dimension Integration</a> 
+    </li><li>
+      <a href="#ref-for-dfn-proof-point-12" title="§ 3.3.1 Proof Points">§ 3.3.1 Proof Points</a> 
+    </li><li>
+      <a href="#ref-for-dfn-proof-point-13" title="§ 3.3.1.1 Support Staff Training">§ 3.3.1.1 Support Staff Training</a> 
+    </li><li>
+      <a href="#ref-for-dfn-proof-point-14" title="§ 3.4.1 Proof Points for ICT Development Lifecycle Dimension">§ 3.4.1 Proof Points for ICT Development Lifecycle Dimension</a> 
+    </li><li>
+      <a href="#ref-for-dfn-proof-point-15" title="§ 3.4.1.5 ICT Development Training">§ 3.4.1.5 ICT Development Training</a> 
+    </li><li>
+      <a href="#ref-for-dfn-proof-point-16" title="§ 3.6.1 Proof Points">§ 3.6.1 Proof Points</a> 
+    </li><li>
+      <a href="#ref-for-dfn-proof-point-17" title="§ 3.6.1.6 Procurement Training">§ 3.6.1.6 Procurement Training</a> 
+    </li><li>
+      <a href="#ref-for-dfn-proof-point-18" title="§ 3.7.1 Proof Points">§ 3.7.1 Proof Points</a> 
+    </li><li>
+      <a href="#ref-for-dfn-proof-point-19" title="§ 3.7.1.2 General Training">§ 3.7.1.2 General Training</a> 
+    </li>
   </ul>
     </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-vpat" aria-label="Links in this document to definition: Voluntary Product Accessibility Template®">
       <span class="caret"></span>
@@ -1335,10 +1335,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <p><b>Referenced in:</b></p>
       <ul>
     <li>
-    <a href="#ref-for-dfn-vpat-1" title="§ 1.4 Key terms">§ 1.4 Key terms</a> 
-  </li><li>
-    <a href="#ref-for-dfn-vpat-2" title="§ 3.1.1.2 Accessible Direct Communications">§ 3.1.1.2 Accessible Direct Communications</a> 
-  </li>
+      <a href="#ref-for-dfn-vpat-1" title="§ 1.4 Key terms">§ 1.4 Key terms</a> 
+    </li><li>
+      <a href="#ref-for-dfn-vpat-2" title="§ 3.1.1.2 Accessible Direct Communications">§ 3.1.1.2 Accessible Direct Communications</a> 
+    </li>
   </ul>
     </div><script id="respec-dfn-panel">(() => {
 // @ts-check
