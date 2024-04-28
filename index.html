@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml"><head>
 <meta charset="utf-8">
-<meta name="generator" content="ReSpec 34.5.0">
+<meta name="generator" content="ReSpec 35.0.0">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 .issue-label{text-transform:initial}
@@ -61,8 +61,6 @@ dfn{cursor:pointer}
 25%{transform:scale(1.25,1.25);opacity:.75}
 100%{transform:scale(1,1)}
 }
-:is(h1,h2,h3,h4,h5,h6,a) abbr{border:none}
-dfn{font-weight:700}
 a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
 a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
 a.bibref{text-decoration:none}
@@ -76,19 +74,8 @@ a.bibref{text-decoration:none}
 cite .bibref{font-style:normal}
 a[href].orcid{padding-left:4px;padding-right:4px}
 a[href].orcid>svg{margin-bottom:-2px}
-.toc a,.tof a{text-decoration:none}
 ol.tof,ul.tof{list-style:none outside none}
 .caption{margin-top:.5em;font-style:italic}
-table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}
-.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}
-.simple th a{color:#fff;padding:3px 5px;text-align:left}
-.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}
-.simple td{padding:3px 10px;border-top:1px solid #ddd}
-.simple tr:nth-child(even){background:#f0f6ff}
-.section dd>p:first-child{margin-top:0}
-.section dd>p:last-child{margin-bottom:0}
-.section dd{margin-bottom:1em}
-.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}
 #issue-summary>ul{column-count:2}
 #issue-summary li{list-style:none;display:inline-block}
 details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}
@@ -157,15 +144,15 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   "postProcess": [
     null
   ],
-  "publishISODate": "2024-04-01T00:00:00.000Z",
-  "generatedSubtitle": "W3C Editor's Draft 01 April 2024"
+  "publishISODate": "2024-04-28T00:00:00.000Z",
+  "generatedSubtitle": "W3C Editor's Draft 28 April 2024"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED"></head>
   <body class="h-entry informative"><div class="head">
     <p class="logos"><a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
   </a></p>
     <h1 id="title" class="title">Accessibility Maturity Model</h1> 
-    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2024-04-01">01 April 2024</time></p>
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2024-04-28">28 April 2024</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
@@ -305,9 +292,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <p>This document is intended to guide and evaluate the levels of organizational accessibility maturity that encompasses a public or private sector organization at any scale.</p>
         <p>The primary audience for this maturity model is:</p>
         <ul>
-          <li>Executive levels of an organization’s leadership</li>
-          <li>Other levels of management responsible for particular aspects of the maturity of the defined dimensions</li>
-          <li>Policy and business process subject matter experts responsible for putting plans, actions, metrics, and governance in place</li>
+            <li>Executive levels of an organization’s leadership</li>
+            <li>Other levels of management responsible for accessibility maturity</li>
+            <li>Policy and business process subject matter experts responsible for putting plans, actions, metrics, and governance in place.</li>
         </ul>
         <section id="scope"><div class="header-wrapper"><h4 id="x1-2-1-scope"><bdi class="secno">1.2.1 </bdi>Scope</h4><a class="self-link" href="#scope" aria-label="Permalink for Section 1.2.1"></a></div>
           
@@ -362,7 +349,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     </section>  
     <section id="maturity-model-structure"><div class="header-wrapper"><h2 id="x2-maturity-model-structure"><bdi class="secno">2. </bdi>Maturity Model Structure</h2><a class="self-link" href="#maturity-model-structure" aria-label="Permalink for Section 2."></a></div>
       
-      <p>The Accessibility Maturity Model is organized around seven important aspects, or <a data-link-type="dfn|abstract-op" href="#dfn-dimension" class="internalDFN" id="ref-for-dfn-dimension-2" title="An aspect on which an organization measures its accessibility maturity.">dimensions</a>, of an <a data-link-type="dfn|abstract-op" href="#dfn-organization" class="internalDFN" id="ref-for-dfn-organization-2" title="Include, but are not limited to:">organization</a> where accessibility maturity can improve conformance with accessibility standards and regulations.</p> 
+      <p>The Accessibility Maturity Model is organized around seven essential <a data-link-type="dfn|abstract-op" href="#dfn-dimension" class="internalDFN" id="ref-for-dfn-dimension-2" title="An aspect on which an organization measures its accessibility maturity.">dimensions</a> of an <a data-link-type="dfn|abstract-op" href="#dfn-organization" class="internalDFN" id="ref-for-dfn-organization-2" title="Include, but are not limited to:">organization</a> where accessibility maturity can improve conformance with accessibility standards and regulations.</p> 
       <p>Dimensions have a unique descriptive name with a high-level, plain-language summary of what the dimension covers. Each dimension has two sub-sections:</p>
       <ul>
         <li>Proof points are criteria for accessibility maturity supported by evidence. Each <a data-link-type="dfn|abstract-op" href="#dfn-proof-point" class="internalDFN" id="ref-for-dfn-proof-point-3" title="Are criteria for accessibility maturity supported by evidence.">proof point</a> includes a high-level description. Deliverables are mostly self-explanatory, but in some cases, additional information is provided.</li>
@@ -1041,7 +1028,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <section id="culture"><div class="header-wrapper"><h3 id="x3-7-culture"><bdi class="secno">3.7 </bdi>Culture</h3><a class="self-link" href="#culture" aria-label="Permalink for Section 3.7"></a></div>
         
         <p>Organizational culture consists of shared beliefs, values, policies, and processes established by leaders that ultimately shape employee perceptions, behaviors, and understanding.</p>
-        <p>To demonstrate cultural maturity in accessibility, all aspects of the <a data-link-type="dfn|abstract-op" href="#dfn-organization" class="internalDFN" id="ref-for-dfn-organization-17" title="Include, but are not limited to:">organization</a>’s operation, processes, and skills should include considerations for disability inclusion. Every member of the organization should understand and be sensitive to the importance of ICT accessibility, including their personal role and responsibilities in meeting the organization’s accessibility goals. Accessibility should be an integral part of diversity and inclusion within the organization with clear recognition of the benefits of disability inclusion and the impact of ICT accessibility on people with disabilities to facilitate access to jobs, services, and other aspects of life.</p>
+        <p>To demonstrate cultural maturity in accessibility, all aspects of the <a data-link-type="dfn|abstract-op" href="#dfn-organization" class="internalDFN" id="ref-for-dfn-organization-17" title="Include, but are not limited to:">organization</a>’s operation, processes, and skills should include considerations for disability inclusion. 
+          Every member of the organization should understand and be sensitive to the importance of ICT accessibility, including their personal role and responsibilities in meeting the organization’s accessibility goals. 
+          Accessibility should be an integral part of diversity and inclusion within the organization, with clear recognition of the benefits of disability inclusion, 
+          and the impact of ICT accessibility on people with disabilities to facilitate access to jobs, services, and other aspects of life.</p>
         <section id="culture-proof-points"><div class="header-wrapper"><h4 id="x3-7-1-proof-points"><bdi class="secno">3.7.1 </bdi>Proof Points</h4><a class="self-link" href="#culture-proof-points" aria-label="Permalink for Section 3.7.1"></a></div>
           
           <p>Culture <a data-link-type="dfn|abstract-op" href="#dfn-proof-point" class="internalDFN" id="ref-for-dfn-proof-point-20" title="Are criteria for accessibility maturity supported by evidence.">proof points</a> may include but are not limited to:</p>
