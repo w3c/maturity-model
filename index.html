@@ -433,7 +433,8 @@
       <section id="support">
         <h3>Support</h3>
         <p>Both internal employees and external customers with disabilities need support with regard to the organization&apos;s ICT. This includes reasonable accommodations for employees and customer support specific to users&apos; ICT accessibility needs.</p>
-      <section id="evaluate-support">
+      
+        <section id="evaluate-support">
         <h4>How to Evaluate Support Maturity Level</h4>
         <ol>
           <li>Download the <a href="https://www.w3.org/TR/maturity-model/A11yMaturityTemplate.xlsx">maturity model spreadsheet</a>.</li>
@@ -496,61 +497,104 @@
      
       <section id="ict-development-lifecycle">
         <h3>ICT Development Lifecycle</h3>
-        <p>Accessible Information and communication technologies (ICT) serves as a critical enabler that allow persons with disabilities to realize full and effective opportunities to participate, on the basis of equality, in all aspects of society and development that involve technology. Accessibility should be considered throughout the entire ICT development lifecycle: from idea conception, to design, development, testing, production of an ACR based on the VPAT, user research, maintenance, and obsolescence. Training programs must be established and ongoing to have necessary skills for the ICT Development Lifecycle dimension.</p>
+        <p>Accessible Information and communication technologies &#40;ICT&#41;  serve as a critical enabler that allows persons with disabilities to realize full and effective opportunities to participate, on the basis of equality, in all aspects of society and development that involve technology. Accessibility should be considered throughout the entire ICT development lifecycle: from idea conception to design, development, testing, production of an ACR based on the VPAT, user research, maintenance, and obsolescence. Training programs must be established and ongoing to have the necessary skills for the ICT Development Lifecycle dimension.</p>
+        <section id="evaluate-ICT-development-lifecycle">
+          <h4>How to Evaluate ICT Development Lifecycle Maturity Level</h4>
+          <ol>
+            <li>Download the <a href="https://www.w3.org/TR/maturity-model/A11yMaturityTemplate.xlsx">maturity model spreadsheet</a>.</li>
+            <li>List all the organization&apos;s current “ICT Development Lifecycle” efforts.</li>
+            <li>Compare the list to the spreadsheet to decide which proof points will be used to assess your organization&apos;s “ICT Development Lifecycle” accessibility maturity. Not all proof points will be used for every business or organization. The proof points in section 3.4.2 are non-exhaustive examples of criteria.</li>
+          </ol>
+          <p>The level is <b>Inactive</b> when proof points demonstrate that:</p>
+            <ul>
+              <li>no effort has been made or only isolated efforts have been identified.</li>
+            </ul>
+          <p>The level is <b>Launch</b> when proof points demonstrate that:</p>
+            <ul>
+              <li>there is some awareness and recognition of the need for accessible ICT development, but it is inconsistently approached or decentralized</li>
+              <li>accessibility efforts are limited to new products, applications, and websites</li>
+              <li>plans are in place to provide accessibility ICT development lifecycle training, relevant to each individual&apos;s position.</li>
+            </ul>
+          <p>The level is <b>Integrate</b> when proof points demonstrate that:</p>
+            <ul>
+              <li>there are ongoing process improvement efforts for accessibility in the ICT development lifecycle per role or discipline</li>
+              <li>accessibility requirements are considered and practiced but not consistently applied during ICT design, development, and testing across the ICT portfolio</li>
+              <li>remediation of existing products, applications, and websites has started</li>
+              <li>training on ICT development lifecycle accessibility, relevant to each individual&apos;s position, has started.</li>
+            </ul>
+          <p>The level is <b>Optimize</b> when proof points demonstrate that:</p>
+            <ul>
+              <li>there&apos;s an ICT development accessibility thought leader at the organization who adheres to a structural, standardized, and reporting approach</li>
+              <li>design specifications include accessibility guidance, developers consistently create accessible User Interfaces &#40;UI&#41;, manual and automated accessibility testing is performed during development, and automated accessibility testing is incorporated into Continuous Integration/Continuous Delivery &#40;CI/CD&#41; build pipelines</li>
+              <li>release management includes gates for accessibility quality</li>
+              <li>maintenance releases are re-inspected for accessibility</li>
+              <li>ACRs are updated and made available, as needed, for procurable ICT</li>
+              <li>research deliberately seeks out and evaluates input from users with disabilities</li>
+              <li>ICT development lifecycle accessibility training, relevant to each individual&apos;s position, is required, measured, and monitored for improvement.</li>
+            </ul>
+        </section>
+        
         <section id="development-lifecycle-proof-points">
           <h4>Proof Points for ICT Development Lifecycle Dimension</h4>
           <p>ICT development lifecycle [=proof points=] may include but are not limited to:</p>
-          <section id="design">
-            <h5>Design</h5>
+          
+          <section id="user-research">
+            <h5>User Research</h5>
             <ul>
-              <li>Accessible design review process with templates, checklists, and output</li>
-              <li>Design style guides include accessibility considerations</li>
-              <li>Design work products delivered to developers include accessibility information that at least meets relevant accessibility standards</li>
-              <li>Consistent approach to designing accessibility features across products</li>
+              <li>user research includes disabilities</li>
+              <li>conduct user research focusing only on disabilities</li>
+              <li>research participants are provided with applicable accommodations, such as more time for the session, assistive technology, virtual options, and details about the physical location for in-person sessions and how they will be provided access</li>
+              <li>forms, releases, instructions, or other materials are accessible</li>
+              <li>archetypes, personas, journey maps, and other relevant synthesis and output from user research include people with disabilities</li>
             </ul>
           </section>
+
+          <section id="design">
+            <h5>Design</h5> 
+              <ul>
+                <li>designers have access to accessibility checklists, guidelines, annotation templates, etc. </li>
+                <li>accessibility reviews are part of the design process</li>
+                <li>design and content style guides include accessibility considerations</li>
+                <li>design systems components include accessibility considerations</li>
+                <li>design work delivered to developers includes accessibility information and annotations that meet relevant accessibility standards</li>
+                <li>consistent approach to designing accessibility features across products</li>
+                <li>user stories, jobs to be done &#40;JTBD&#41;, etc., include persons with disabilities</li>
+              </ul>
+          </section>
+          
           <section id="development">
             <h5>Development</h5>
             <ul>
-              <li>Accessible developer implementation resources
+              <li>accessible developer implementation resources
                 <ul>
-                  <li>Team channels to discuss accessibility - direct messaging, office hours, email</li>
-                  <li>Information pages</li>
+                  <li>team channels to discuss accessibility - direct messaging, office hours, email</li>
+                  <li>information pages</li>
                 </ul>
               </li>
-              <li>Developer's accessibility checklists</li>
-              <li>Consistent approach to implementing accessibility features across products</li>
-              <li>Documented way to triage and prioritize fixing accessibility issues and address [=customer=]-reported feedback on accessibility</li>
+              <li>developer&apos;s accessibility checklists</li>
+              <li>consistent approach to implementing accessibility features across products</li>
+              <li>documented way to triage and prioritize fixing accessibility issues and address [=customer=]-reported feedback on accessibility</li>
+              <li>accessibility requirements included in the definition of done</li>
             </ul>
           </section>
-          <section id="user-experience">
-            <h5>User Experience</h5>
-            <ul>
-              <li>User research includes disabilities
-                <ul>
-                  <li>All research asks participants to anonymously identify whether or not they have a disability, and if so, what type of disability/ies</li>
-                </ul>
-              </li>
-              <li>User research focusing only on disabilities is performed</li>
-            </ul>
-          </section> 
+           
           <section id="quality-review-release">
             <h5>Quality Review Through Release</h5>
             <ul>
-              <li>Consistent approach to testing and releasing products</li>
-              <li>Testing process documents steps for manual accessibility testing, utilizing assistive technology</li>
-              <li>Testing process includes automated accessibility testing</li>
-              <li>Schedule includes stakeholder activities focused on accessibility</li>
-              <li>Bug tracking system includes an accessibility category</li>
-              <li>Prioritization and grooming system for accessibility defects</li>
-              <li>Accessibility identified as product release gate</li>
-              <li>Documented testing steps and cadence for agile delivery of changes that do not go through a full release cycle. Some examples are:
+              <li>consistent approach to accessibility testing and releasing products</li>
+              <li>testing process documents steps for manual accessibility testing, utilizing assistive technology</li>
+              <li>testing process includes automated accessibility testing</li>
+              <li>schedule includes stakeholder activities focused on accessibility</li>
+              <li>bug-tracking system includes an accessibility category</li>
+              <li>prioritization and review system for accessibility defects</li>
+              <li>accessibility is identified as a product release gate</li>
+              <li>documented testing steps and cadence for agile delivery of changes without a full release cycle. Some examples are:
                 <ul>
-                  <li>Content review for website updates</li>
-                  <li>Content review for social media posts</li>
+                  <li>content review for website updates</li>
+                  <li>content review for social media posts</li>
                 </ul>
               </li>
-              <li>ACR/VPAT authoring guide for commercial off-the-shelf (COTS) products</li>              
+              <li>accessibility Conformance Report &#40; ACR&#41; authoring guide for commercial off-the-shelf &#40;COTS&#41; products used within the business, such as Google Workspace, Microsoft Office, or Jira</li>              
             </ul>
           </section>
           
@@ -558,66 +602,13 @@
           <section id="ict-development-training">
             <h5>ICT Development Training</h5>
             <ul>
-              <li>Accessibility in the ICT lifecycle training is in place to build and maintain relevant role-based skills in support of this dimension’s [=proof points=]</li>
+              <li>accessibility in the ICT lifecycle training is in place to build and maintain relevant role-based skills in support of this dimension&apos;s [=proof points=]</li>
             </ul>
           </section>         
         </section>
-        <section id="development-lifecycle-ratings-for-evaluation">
-          <h4>Ratings for Evaluation</h4>
-            <p>Follow the instructions in the <a href="#assessment-template-excel">Maturity Model Excel Spreadsheet</a> section to get the latest spreadsheet to fill out for this dimension.</p>
-          <table>
-            <tr>
-              <th>Maturity stages</th>
-              <th>Criteria</th>
-            </tr>
-            <tr>
-              <th>Inactive</th>
-              <td>
-                <strong>Definition:</strong> No accessibility effort at all around ICT development.
-                <p><strong>Outcomes:</strong></p>
-                <ul>
-                  <li>If ACRs are required, they are not being produced.</li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th>Launch</th>
-              <td>
-                <strong>Definition:</strong> Some awareness and recognition of the need for accessible ICT development, inconsistently approached, decentralized.
-                <p><strong>Outcomes:</strong></p> 
-                <ul>
-                  <li>Accessibility efforts may be limited in scope to new products, applications, and websites.</li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th>Integrate</th>
-              <td>
-                <strong>Definition:</strong> Organizational effort and approach for improving accessibility in ICT development per role or discipline. 
-                <p><strong>Outcomes:</strong></p> 
-                <ul>
-                  <li>Accessibility requirements are considered and practiced during ICT design, development, and testing, but are not consistently applied across the ICT portfolio.</li>
-                  <li>Some attempt is made to remediate existing products, applications, and websites.</li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th>Optimize</th>
-              <td>
-                <strong>Definition:</strong> Thought leader in Accessibility on ICT development with strong ICT development knowledge and skills, structural, standardized and reported approach.
-                <p><strong>Outcomes:</strong></p> 
-                <ul>
-                  <li>Design specifications include accessibility guidance, developers consistently create accessible User Interface (UI), both manual and automated accessibility testing is performed during development, and automated accessibility testing is incorporated into Continuous Integration/Continuous Delivery (CI/CD) build pipelines</li>
-                  <li>Release management includes gates for accessibility quality.</li>
-                  <li>Maintenance releases are re-inspected for accessibility.</li>
-                  <li>ACRs are kept up to date and made available, as needed, for procurable ICT.</li>
-                  <li>Research deliberately seeks out and evaluates input from users with disabilities.</li>
-                </ul>
-              </td>
-            </tr>            
-          </table>
-        </section>
       </section>
+      
+      
       <section id="personnel">
         <h3>Personnel</h3>
         <p>Persons with disabilities should be utilized throughout an [=organization=]’s hierarchy (all job types, all authority levels) where their unique insights and lived experiences can better inform decision making. This requires accessible and inclusive hiring practices covering applications, interviews, evaluations, onboarding and retention.</p>
