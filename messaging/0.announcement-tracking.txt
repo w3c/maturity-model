@@ -1,0 +1,21 @@
+   replace "XYZ2" with a short name of your document
+     * Expected date: 00 Month 202N
+     * Contact(s) for Shawn to get info: Name e-mail phone
+     * Draft document: link to staging
+     * Related pages that need updating: (such as Overview page)
+
+   Any notes for us working on the announcements, such as important points to get across: (see
+https://www.w3.org/wiki/WAI/announcements#Help_craft_messaging )
+
+Status of announcements below: draft not ready for review
+
+   Review of announcements below:
+     * @@ OKed by [name] on [date]
+
+NOTE: For further guidance on creating messaging consult
+https://www.w3.org/WAI/cc/wiki/WAI_Announcement_Drafts#.5BTemplate.5D_Spec_XYZ_Announcements
+
+
+When announcements are ready for Shawn's review or drafting, please e-mail
+shawn@w3.org subject: [announcements]
+
