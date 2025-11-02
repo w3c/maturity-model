@@ -1,7 +1,8 @@
-     * Expected date: 10 November 2025
-     * Contact(s) for Shawn to get info: David Fazio dfazio@helixopp.com (415) 882 6034, Janina Sajka janina@a11y.nyc (202) 494 7040  
-     * Draft document: https://w3c.github.io/maturity-model/
-     * Related pages that need updating: (such as Overview page): None
+1.0 APA Note: Accessibility Maturity Model
+* Expected date: 07 November 2025
+* Contact(s) for Shawn to get info: David Fazio dfazio@helixopp.com (415) 882 6034, Janina Sajka janina@a11y.nyc (202) 494 7040  
+* Draft document: https://w3c.github.io/maturity-model/
+* Related pages that need updating: (such as Overview page): None
 
   
 
@@ -9,7 +10,7 @@ Status of announcements below: draft ready for review
 
    Review of announcements below:
 
-The W3C Accessible Platform Architectures Working Group has published the Accessibility Maturity Model Group Note. The document describes an overall framework for establishing a robust ICT accessibility program andidentifying areas for improvement. This version is the first public Note published by the Accessible Platform Architectures Working Group Maturity Model Task Force, developed with the community, as a version 1.0.
+The W3C Accessible Platform Architectures Working Group Maturity Model Task Force has published the Accessibility Maturity Model Group Note. The document describes an overall framework for establishing a robust ICT accessibility program andidentifying areas for improvement. This version is the first public Note published by the Accessible Platform Architectures Working Group Maturity Model Task Force, developed with the community, as a version 1.0.
      * @@ OKed by [name] on [date]
 
 NOTE: For further guidance on creating messaging consult
