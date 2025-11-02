@@ -10,8 +10,7 @@ Status of announcements below: draft ready for review
 
    Review of announcements below:
 
-The W3C Accessible Platform Architectures Working Group Maturity Model Task Force has published the Accessibility Maturity Model Group Note. The document describes an overall framework for establishing a robust ICT accessibility program andidentifying areas for improvement. This version is the first public Note published by the Accessible Platform Architectures Working Group Maturity Model Task Force, developed with the community, as a version 1.0.
-     * @@ OKed by [name] on [date]
+The W3C Accessible Platform Architectures Working Group Maturity Model Task Force has published the Accessibility Maturity Model Group Note. The document describes an overall framework for establishing a robust ICT accessibility program by identifying and tracking areas for improvement. This version is the first public Note published by the Accessible Platform Architectures Working Group Maturity Model Task Force, developed with the community, as a version 1.0. The approaches identified in this Note are intended to influence organizational programs and processes to advance accessibility with a holistic focus.
 
 NOTE: For further guidance on creating messaging consult
 https://www.w3.org/WAI/cc/wiki/WAI_Announcement_Drafts#.5BTemplate.5D_Spec_XYZ_Announcements
