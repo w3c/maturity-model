@@ -1,5 +1,5 @@
 1.0 APA Note: Accessibility Maturity Model
-* Expected date: 07 November 2025
+* Expected date: 05 November 2025
 * Contact(s) for Shawn to get info: David Fazio dfazio@helixopp.com (415) 882 6034, Janina Sajka janina@a11y.nyc (202) 494 7040  
 * Draft document: https://w3c.github.io/maturity-model/
 * Related pages that need updating: (such as Overview page): None
